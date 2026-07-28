@@ -19,14 +19,16 @@ about:
     - icon: file-earmark-pdf
       text: Resume
       href: resume.qmd
+format:
+  html:
+    css: styles.css
 ---
 
-```{css, echo=FALSE}
-/* Nudge the image and links column down */
+/* Nudge the image and links column down on trestles layout */
 .about-layout-trestles .about-entity {
-  margin-top: 4rem; 
+  margin-top: 4rem !important; 
 }
-```
+
 
 I build data pipelines and turn messy data into decisions people can act on.
 Right now I am finishing my M.S. in Data Science at **Willamette University**,
