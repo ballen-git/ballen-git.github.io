@@ -1,7 +1,7 @@
 ---
-title: "Blitz Bearcat"
+title: "Bradley Allen"
 subtitle: "M.S. Data Science Candidate · Willamette University"
-image: images/profile.png
+image: images/bradley-photo.png
 about:
   template: trestles
   image-shape: round
