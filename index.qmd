@@ -27,8 +27,9 @@ Right now I am finishing my M.S. in Data Science at **Willamette University**,
 where my capstone [predicts \[your one-line problem\]](capstone.qmd) for
 \[your stakeholder\].
 
-[life expectancy](data-501-final/red-state-blue-state-mental-state.html)
+Python for Data Science (Data 501) Final Project: [Red State, Blue State, Mental State](data-501-final/red-state-blue-state-mental-state.html)
 
+Data Visualization (Data 502) Project: [Life Expectancy](data-502-hw04/HW04.html)
 
 I care about \[topics you actually care about — e.g. housing, health equity,
 sports analytics\], reproducible workflows, and explaining a model to the person
