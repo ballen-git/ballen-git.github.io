@@ -27,7 +27,7 @@ Right now I am finishing my M.S. in Data Science at **Willamette University**,
 where my capstone [predicts \[your one-line problem\]](capstone.qmd) for
 \[your stakeholder\].
 
-[life expectancy](data-501-final/red-state-blue-state-mental-state.html.qmd)
+[life expectancy](data-501-final/red-state-blue-state-mental-state.html)
 
 
 I care about \[topics you actually care about — e.g. housing, health equity,
