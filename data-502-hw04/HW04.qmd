@@ -1,0 +1,547 @@
+---
+title: "DATA502: Homework 4"
+link-citations: true
+format: 
+  html:
+    code-fold: true
+    toc: true
+    toc-depth: 5
+bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+```{r, warning=FALSE, echo=FALSE}
+# install.packages("WDI")
+library(tinytex)
+library(gapminder)
+library(tidyverse)
+library(ggplot2)
+library(GGally)
+library(WDI)
+```
+
+```{r, echo=FALSE}
+# DATASETS
+af = WDI(country = "AF", indicator = "SP.DYN.LE00.IN", start = 1960)
+gm = gapminder
+```
+
+# Questions
+
+## Did the US-Afghanistan war affect life expectancy in Afghanistan?
+
+According to the Council on Foreign Wars [@laub2022], the war in Afghanistan began with Operation Enduring Freedom on October 7, 2001 and "major combat" concluded on May 1st, 2003. Another significant series of dates includes the American military "surge" from December 1, 2009 until the "troop drawdown" on June 22, 2011. The goal of this first EDA is to graph the life expectancy by year beginning two years prior to the war and concluding two years after the draw-down. Therefore, the years in of interest are 1999 to 2013. The delimiters for wartime will be 2001 to 2003 and 2009 to 2011. The wartime years will be shaded and labeled "Major Combat Years" and "Surge Years," respectively. The years before, between, and after will be un-shaded and serve as contrasts. The data set used for this project comes from the @worldbankgroup2023. The initial EDA used the Gapminder [@bryan_gapminder_2025] but that data set was not great for this question.
+
+**Data Frame Code**
+
+Created using the @worldbankgroup2023 data set. I used the filter function to isolate the year range from 1999 to 2013, renamed the original life expectancy header, and selected country, year, and life expectancy to use for plot creation.
+
+```{r}
+# Create DF
+us_af = af %>% filter(year > 1998 & year < 2014) %>%
+  mutate(life_expect = SP.DYN.LE00.IN) %>%
+  select(c(country, year, life_expect)) %>%
+  mutate(avg = mean(life_expect),
+         avg_diff = life_expect - avg)
+```
+
+### Fig. 1: Change in Life Expectancy
+
+**Plot Code**
+
+```{r, out.width="90%"}
+# Create Plot
+ggplot(us_af, mapping = aes(x = year, y = life_expect)) +
+  annotate("rect",
+    xmin = c(2001, 2009), 
+    xmax = c(2003, 2011),
+    ymin = -Inf, 
+    ymax = Inf,
+    fill = "grey",
+    alpha = 0.4
+    ) +
+  annotate("text", 
+           x = c(2002, 2010), 
+           y = 62.5, 
+           label = c("Major Combat Years", 
+                     "Surge Years"), 
+           alpha = 0.5) +
+  geom_point(size = .9) +
+  geom_smooth(method = "lm",
+              se = FALSE,
+              aes(color = "Avg Life Expect"),
+              linewidth = .4,
+              linetype = "dashed"
+              ) +
+  annotate(
+    # Labels for Major Combat Years points
+    "text",
+    x = c(2000.9, 2001.9, 2002.75, 2003.75),
+    y = c(55.15, 55.8, 57.55, 58.2),
+    label = c("-94", "-34", "+110", "+142")
+  ) +
+  annotate(
+    # Labels for Surge Years points
+    "text",
+    x = c(2008.85, 2010, 2011),
+    y = c(60.6, 60.35, 60.9),
+    label = c("+26", "-9", "-10")
+  ) +
+  annotate(
+    # Place "min" label
+    "text",
+    x = c(2000.9),
+    y = c(54.75),
+    label = c("(Min)"),
+    color = "red",
+    alpha = 0.5
+  ) +
+    annotate(
+    # Place "max" label
+    "text",
+    x = c(2003.85),
+    y = c(58.65),
+    label = c("(Max)"),
+    color = "blue",
+    alpha = 0.5
+  ) +
+  # Add labels for axes and title, add legend
+  labs(x = "Year",
+       y = "Life Expectancy in Years",
+       title = "Life Expectancy Change in Days of Afghans from 1999 to 2013") +
+  theme_classic() +
+  scale_color_manual(
+    name = "Legend",
+    breaks = c("Avg Life Expect"),
+    values = c("Avg Life Expect" = "blue")
+    )
+```
+
+**Note:** The dashed blue line is the linear model representing the average life expectancy. The values near the points indicate the deviation from the model as change in life expectancy in number of days. Min indicates the greatest negative deviation in life expectancy in the date range. Max indicates the greatest positive change in life expectancy in the date range.
+
+**Linear Model**
+
+The linear model was created using the built in lm() function. Parameters include x = year, y = life expectancy. Differences between the observed points and the model were calculated using the predict() function.
+
+```{r}
+# Fit the LM model
+lm <- lm(life_expect ~ year, data = us_af)
+
+# Get the fitted values
+us_af$predicted_life_expect <- predict(lm)
+
+# Calculate the difference
+us_af$residual_lm <- us_af$life_expect - us_af$predicted_life_expect
+```
+
+**Point Data**
+
+I used the built in linear model function to calculate the predicted values. I then calculated the difference between the model and observed values to find the difference in years, then multiplied that value by 365 to find the change in number of days of life expectancy. Finally, I found the minimum and maximum values and their associated years to include on the plot.
+
+```{r}
+# Print differences for period of interest
+years = c(2001:2003, 2009:2011)
+for (year in years){
+print(paste(year, "Avg difference (days): ", round(us_af[us_af$year == year, "residual_lm"] * 365)))
+}
+
+print(paste("Max difference: ", 
+            round(max(us_af$residual_lm)*365),
+            ", ",
+            us_af$year[us_af$residual_lm == max(us_af$residual_lm)]))
+
+
+print(paste("Min difference: ", 
+            round(min(us_af$residual_lm)*365),
+            ", ",
+            us_af$year[us_af$residual_lm == min(us_af$residual_lm)]))
+```
+
+### Analysis
+
+The results from the EDA are not obvious. The most compelling data points are 2001, which contains the greatest negative deviation from the average, and 2004, which contains the greatest positive deviation from the average. These points are significant because the war began at the end of 2001 and saw the most aggressive bombing campaign, while 2004 is the year following the major combat years [@laub2022]. One interpretation of the data from this range is that combat was at the highest levels in 2001 and 2002 which is likely related to the negative deviation. At the same time, as combat decline in 2003, life expectancy began to rebound with the largest growth in 2004. With respect to the surge years, one interpretation might that there was a lagging effect on life expectancy as US soldier presence increased during the surge, which was likely a policing campaign, versus a major bombing campaign compared to 2001. Unfortunately, with the limited available information provided, a true conclusion cannot be formed.
+
+## Does Life Expectancy Vary by GDP Per Capita Between the Top and Bottom Five Countries?
+
+Using the Gapminder data set [@bryan_gapminder_2025], I will create faceted line plot of countries who rank, on average, in the top and bottom five for GDP per capita for the years included in the data set. In general, life expectancy and GDP per capita are positively correlated [@pradosdelaescosura2023; @tarca2024]. Therefore, it is expected that life expectancy will vary significantly between countries in the top and bottom five rankings of GDP per capita.
+
+**Data Wrangling**
+
+I created a new data frame and piped in country groups with a column added for average GDP per capita, then used a series of mutates to find country GDP per capita rankings (e.g., top / bottom 5). This list was then added in the ggplot as a filter.
+
+```{r, eval=FALSE}
+# WRANGLE DATA
+gdp = gm %>%
+  group_by(country) %>%
+  mutate(avg = mean(gdpPercap))
+
+top_five = gdp %>%
+  select(country, avg) %>%
+  distinct() %>%
+  arrange(desc(avg)) %>%
+  head(6)
+print(top_five)
+
+bottom_five = gdp %>%
+  select(country, avg) %>%
+  distinct() %>%
+  arrange(avg) %>%
+  head(5)
+print(bottom_five)
+```
+
+### Fig. 2: Life Expectancy and GDP Per Capita by Country
+
+**Plot Code**
+
+```{r, out.width="100%"}
+# Create list of countries
+country_list = c("Kuwait", 
+                 "Switzerland", 
+                 "Norway", 
+                 "United States", 
+                 "Canada",
+                 "Myanmar",
+                 "Burundi",
+                 "Ethiopia",
+                 "Eritrea",
+                 "Mozambique"
+)
+
+# Create data set
+gdp_plot = gm %>% 
+  filter(country %in% country_list) %>%
+  mutate(group_var = factor(country, levels = country_list))
+
+# Create plot
+ggplot(gdp_plot, mapping = aes(x = gdpPercap, y = lifeExp, color = country)) +
+  geom_point() +
+  # Added dashed line after reading SWD Ch. 3 on connection
+  geom_line(linetype = "dashed") +
+  # Add dashed line at y = 60
+  geom_hline(yintercept = 60,
+             color = "red", 
+             linetype = "dashed") +
+  # Prevent countries from being re-organized
+  guides(color = "none") +
+  # Facet to 2 x 5 to display top 5 on top and bottom 5 on bottom
+  facet_wrap(~ group_var, 
+             nrow = 2,
+             ncol = 5,
+             scales = "free") +
+  # Set scales to log to clean up the points
+  scale_x_log10() +
+  scale_y_log10() +
+  # Reduce the number of x axis labels for readability
+  scale_x_continuous(n.breaks = 3) +
+  theme_minimal() +
+  # Increase spacing between panels and reduce text size for readability
+  theme(panel.spacing.x = unit(1, "lines"),
+        axis.text = element_text(size = 6),
+        axis.title.x = element_text(size = 8),
+        axis.title.y = element_text(size = 8)) +
+  # Labels for axes and title
+  labs(
+    x = "GDP Per Capita",
+    y = "Life Expectancy (Years)",
+    title = "Top 5 vs Bottom 5: Life Expectancy by GDP Per Capita"
+  )
+```
+
+**Note:** The dashed red line at y = 60 acts as a demarcation line to compare how countries relate to each other. To ensure the plots were comparable, the x and y axes were converted to log scale. Country arrangement as follows: The countries at the top are the top 5 by GDP per capita and arranged high to low from left to right, while the countries on the bottom are the bottom 5 by GDP per capita and arranged lowest to highest from left to right.
+
+### Analysis
+
+As expected, life expectancy and GDP per capita were positively correlated with the exception of one country. Despite an unexpected relationship between life expectancy and GDP per capita in Kuwait, I would argue the relationship holds. As can be seen in Fig. 2, excluding Kuwait, there is a minimum life expectancy difference of 10 years between countries in the top 5 vs bottom 5 of GDP per capita rankings, and this gap increases significantly with GDP per capita adding, at the high end, another 20 years to life expectancy. Though this relationship exists, it worth pointing out that GDP per capita likely co-varies with other life-extending variables (e.g., access to health care, food security, education). Nevertheless, the stark differences between these countries are worth acknowledging.
+
+# What Relationships will EDA Reveal for 2007?
+
+I am running this out of curiosity. I do not know what to expect. That said, given my findings above, I suspect I will find a positive relationship between life expectancy and GDP per capita. Again, given what I found above, I will scale my axes to log10.
+
+## Fig. 3: GG Pairs for EDA
+
+**Plot Code**
+
+```{r, out.width="90%"}
+# Filter for the most recent year and select key numerical columns
+gap2007 <- gapminder %>%
+  filter(year == 2007) %>%
+  select(lifeExp, pop, gdpPercap, continent)
+
+# Create ggpairs plot
+ggpairs(gap2007, columns = c("lifeExp", "pop", "gdpPercap"), 
+        ggplot2::aes(color = gap2007$continent)) +
+  scale_x_log10() +
+  scale_y_log10() +
+  labs(title = "Gapminder 2007: Life Exp, Pop, and GDP per Capita")
+```
+
+## Analysis
+
+As expected, there is a positive relationship between life expectancy and GDP per capita. An interesting finding is that GDP per capita and population are negative for Africa and Asia. This suggests that wealth accrues to select populations. I would be curious to explore this further. Another curiosity this inspires is the negative correlation between life expectancy and population for Asia. My final curiosity is whether these relationships hold some 19 years later. In summary, this graphic has inspired more questions than it has answered.
+
+# Method
+
+## Data Sets
+
+Data sets used in this project include Gapminder [@bryan_gapminder_2025] and the *Life Expectancy at Birth* data set for Afghanistan [@worldbankgroup2023].
+
+## Packages
+
+This document was created in R Studio [@positteam2026]. To clean and visualize the data, the following packages were used: GGally [@schloerke2025], ggplot [@wickham2016], knitr [@xie2025], Quarto Markdown [@quartoproject2025], tidyverse [@wickham2019], tinytex [@xie2019], and WDI [@arel-bundock2025].
+
+# Reflection
+
+I spent a lot of time on the first two graphics. I wanted to incorporate special labels for points, highlight regions, and work with axes. I also wanted to see how much I could manipulate the arrangement of facet_wrap. I learned a lot about how to work with labels, and how to layer shaded regions with points and lines, and I even sized the graphics to the page width. Fig. 1 is the one I am most proud of in terms of finding a result, and Fig. 2 I am most satisfied with for aesthetics. Fig. 3 is something I created out of convenience but also curiosity. It is basically right of the can, but I thought it looked neat and offered an opportunity for future directions. The alternate Figs. (see below) represent other ideas I had but ultimately decided against. The way I constructed my plots is by adding one piece at a time, so I don't have "artifacts." I tried something, then added / changed the values.
+
+# Alternate Figs.
+
+## Alt. Fig. 1A
+
+```{r}
+# Model for life expectancy above the average
+pos = us_af %>% filter(avg_diff > 0)
+
+# Fit the LM model
+lm2 <- lm(avg_diff ~ year, data = pos)
+
+# Get the fitted values
+pos$predicted_life_expect <- predict(lm2)
+
+# Calculate the difference
+pos$residual_lm <- pos$avg_diff - pos$predicted_life_expect
+
+# ---------------------------------------------------------
+
+# Model for life expectancy below the average
+neg = us_af %>% filter(avg_diff < 0)
+
+# Fit the LM model
+lm3 <- lm(avg_diff ~ year, data = neg)
+
+# Get the fitted values
+neg$predicted_life_expect <- predict(lm3)
+
+# Calculate the difference
+neg$residual_lm <- neg$avg_diff - neg$predicted_life_expect
+
+# ---------------------------------------------------------
+
+# Create Plot
+
+ggplot(us_af, mapping = aes(x = year, y = avg_diff)) +
+  annotate("rect",
+    xmin = c(2001, 2009), 
+    xmax = c(2003, 2011),
+    ymin = -Inf, 
+    ymax = Inf,
+    fill = "grey",
+    alpha = 0.4
+    ) +
+    annotate("text", 
+           x = c(2002, 2010), 
+           y = 4, 
+           label = c("Major Combat Years", 
+                     "Surge Years"), 
+           alpha = 0.5) +
+  geom_point(size = .95) +
+  geom_hline(yintercept = 0,
+             linetype = "dashed",
+             alpha = 0.5) +
+  annotate("text", 
+           x = 1999, 
+           y = 0.5, 
+           label = "Avg. 58.5 years", 
+           alpha = 0.5) +
+  theme_minimal() +
+  # Linear model for life expect above avg.
+  geom_segment(aes(x = 2006, 
+                   xend = 2013, 
+                   y = coef(lm2)[1] + coef(lm2)[2] * 2006, 
+                   yend = coef(lm2)[1] + coef(lm2)[2] * 2013), 
+               color = "blue") +
+  # Linear model for life expect below avg.
+  geom_segment(aes(x = 1998, 
+                   xend = 2005.3, 
+                   y = coef(lm3)[1] + coef(lm3)[2] * 1998, 
+                   yend = coef(lm3)[1] + coef(lm3)[2] * 2005.3), 
+               color = "red") +
+  labs(x = element_blank(),
+       y = "Life Expect. Above / Below Avg. (58.5)")
+
+  # This code did not work becuase it added lines the length of the fig.
+  # geom_abline(intercept = coef(lm2)[1], slope = coef(lm2)[2], color = "blue") +
+  # geom_abline(intercept = coef(lm3)[1], slope = coef(lm3)[2], color = "red")
+  
+```
+
+**Alt. Fig. 1A:** The idea behind this one was to segment the data by life expectancy above and below the average ($\approx$ 58.5). I think this graphic makes the impact of the initial fighting more clear (the dots below the red line within the shaded area), and completely changes the relationship between the observed and expected values during the surge years, which shows that life expectancy continued to grow. Perhaps this is the result of over-fitting.
+
+## Alt. Fig. 1B
+
+```{r}
+# Barbell Plot
+ggplot(us_af, aes(y = year)) +
+  # Add the segments (the "barbell" part)
+  annotate("rect",
+    ymin = c(2000.8, 2008.8), 
+    ymax = c(2003.2, 2011.2),
+    xmin = -Inf, 
+    xmax = Inf,
+    fill = "grey",
+    alpha = 0.1
+    ) +
+    annotate("text", 
+           x = 58.5, 
+           y = c(2002.1, 2010.1), 
+           label = c("Major Combat Years", 
+                     "Surge Years"), 
+           alpha = 0.75,
+           color = 'darkgrey') +
+  geom_hline(yintercept = c(2000, 2005, 2010),
+             linetype = 'dashed',
+             color = 'grey',
+             alpha = 0.5) +
+  # geom_smooth(method = "lm",
+  #           se = FALSE,
+  #           aes(x = life_expect, y = year),
+  #           color = "steelblue",
+  #           linewidth = 0.1,
+  #           linetype = "dashed"
+  #           ) +
+  geom_segment(aes(
+    x = life_expect, 
+    xend = predicted_life_expect, 
+    y = year, yend = year), 
+    color = "coral") +
+  geom_point(aes(
+    x = life_expect, 
+    color = "Observed"), 
+    size = 2) +
+  geom_point(aes(
+    x = predicted_life_expect, 
+    color = "Expected"), 
+    size = 2) +
+  labs(
+    color = "Life Expectancy (years)",
+    x = element_blank(),
+    y = element_blank(),
+    title = "Life Expectancy Change of Afghans from 1999 to 2013"
+  ) +
+  scale_color_manual(
+    values = c("Observed" = "coral", 
+               "Expected" = "steelblue")
+    ) +
+  theme(
+    panel.grid.major = element_blank(), # Removes major gridlines
+    panel.grid.minor = element_blank(), # Removes minor gridlines
+    panel.border = element_blank(),     # Removes the box border
+    axis.line = element_blank(),        # Removes the x and y axis lines
+    panel.background = element_blank(), # Removes the area behind data
+    plot.background = element_blank()   # Removes the area around the panel
+) +
+  theme(legend.position = "bottom",
+        legend.box = "horizontal")
+
+
+```
+
+**Alt. Fig. 1B:** I was reviewing for the midterm and saw the slide on bar-bell plots and really wanted to make one. I like how this turned out. The observed in orange really contrasts with the expected in blue, and the line connecting them makes the distance clear. I think labels indicating the change during the year intervals would be good to include, but I wanted to keep this simple.
+
+**Trial run code for barbell plot here.**
+
+```{r, eval=FALSE}
+# Original barbell plot code. eval=FALSE
+
+# library(ggalt)
+# Installed for dumbbell plot
+# install.packages("devtools")
+# devtools::install_github("hrbrmstr/ggalt")
+
+# source: https://r-charts.com/distribution/dumbbell-plot-ggplot2/
+
+ggplot(us_af) +
+  geom_dumbbell(aes(
+                y = year, 
+                x = life_expect, 
+                xend = predicted_life_expect), 
+                color = 'darkgray',
+                size = 1,
+                dot_guide = FALSE,
+                size_x = 3,
+                size_xend = 3,
+                colour_x = "#F69541",
+                colour_xend = "#699DC6") +
+  theme(legend.position = "bottom")
+```
+
+## Alt. Fig. 2
+
+```{r, out.width="100%"}
+# Create list of countries
+country_list = c("Switzerland", 
+                 "Norway", 
+                 "United States", 
+                 "Canada",
+                 "Netherlands",
+                 "Myanmar",
+                 "Burundi",
+                 "Ethiopia",
+                 "Eritrea",
+                 "Mozambique"
+)
+
+# Create data set
+gdp_plot2 = gm %>% 
+  filter(country %in% country_list) %>%
+  mutate(group_var = factor(country, levels = country_list)) %>%
+  mutate(is_top = factor(if_else(gdpPercap > 1000, 1, 0))) %>%
+  group_by(year, is_top) %>%
+  mutate(avg_year_plot = mean(lifeExp))
+
+# Create plot
+ggplot(gdp_plot2, mapping = aes(x = gdpPercap, 
+                                y = avg_year_plot, 
+                                group = is_top)) +
+  # Added dashed line after reading SWD Ch. 3 on connection
+  geom_smooth(aes(color = is_top), se = FALSE) +
+  # Add dashed line at y = 60
+  geom_hline(yintercept = 60,
+             color = "red", 
+             linetype = "dashed") +
+  # Prevent countries from being re-organized
+  guides(color = "none") +
+  # Facet to 2 x 5 to display top 5 on top and bottom 5 on bottom
+  facet_wrap(~ fct_rev(is_top), 
+             nrow = 2,
+             ncol = 1,
+             scales = "free",
+             labeller = as_labeller(c(`0` = "Bottom 5", `1` = "Top 5"))
+             ) +
+  # Set scales to log to clean up the points
+  scale_x_log10() +
+  scale_y_log10() +
+  # Reduce the number of x axis labels for readability
+  scale_x_continuous(n.breaks = 3) +
+  # Increase spacing between panels and reduce text size for readability
+  theme(panel.spacing.x = unit(1, "lines"),
+        axis.text = element_text(size = 6),
+        axis.title.x = element_text(size = 8),
+        axis.title.y = element_text(size = 8)) +
+  # Labels for axes and title
+  labs(
+    x = element_blank(),
+    y = element_blank(),
+    title = "Top 5 vs Bottom 5: Avergage Life Expectancy by GDP Per Capita"
+  ) +
+    theme_minimal()
+
+```
+
+**Alt. Fig. 2:** In this one, I averaged the life expectancy values by top 5 and bottom 5 GDP per capita countries. I removed Kuwait because that seemed to be a confound and replaced it with the Netherlands. I think this graphic displays the data well, but I am not sure it is as honest. The averages hide the variability between the categories. However, it is much more clean, and it makes it clear that the Top 5 countries average 70 years of life expectancy at the low end of GDP per cap, and about 80 years at the high end, a differences of about 40 (low end) and 30 years (high end) between the respective groups.
+
+# References
