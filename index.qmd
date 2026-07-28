@@ -21,6 +21,13 @@ about:
       href: resume.qmd
 ---
 
+```{css, echo=FALSE}
+/* Nudge the image and links column down */
+.about-layout-trestles .about-entity {
+  margin-top: 4rem; 
+}
+```
+
 I build data pipelines and turn messy data into decisions people can act on.
 Right now I am finishing my M.S. in Data Science at **Willamette University**,
 where my capstone [predicts \[your one-line problem\]](capstone.qmd) for

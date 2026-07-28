@@ -1,0 +1,12 @@
+{
+  "hash": "6ac124eb5cd5512f008bd5ef17b1a731",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Bradley Allen\"\nsubtitle: \"M.S. Data Science Candidate · Willamette University\"\nimage: images/bradley-photo.jpg\nabout:\n  template: trestles\n  image-shape: round\n  image-width: 16em\n  links:\n    - icon: github\n      text: GitHub\n      href: https://github.com/ballen-git\n    - icon: linkedin\n      text: LinkedIn\n      href: https://www.linkedin.com/in/ballen-in/\n    - icon: envelope\n      text: Email\n      href: mailto:bradley.allen@outlook.com\n    - icon: file-earmark-pdf\n      text: Resume\n      href: resume.qmd\n---\n\n```{css, echo=FALSE}\n/* Nudge the image and links column down */\n.about-layout-trestles .about-entity {\n  margin-top: 4rem; \n}\n```\n\nI build data pipelines and turn messy data into decisions people can act on.\nRight now I am finishing my M.S. in Data Science at **Willamette University**,\nwhere my capstone [predicts \\[your one-line problem\\]](capstone.qmd) for\n\\[your stakeholder\\].\n\nI care about \\[topics you actually care about — e.g. housing, health equity,\nsports analytics\\], reproducible workflows, and explaining a model to the person\nwho has to trust it.\n\n**Currently looking for** \\[data analyst / data scientist / ML engineer\\] roles\nstarting \\[month year\\]. [Get in touch](about.qmd) or grab my\n[resume](resume.qmd).\n\n---\n\n::: {.grid}\n\n::: {.g-col-12 .g-col-md-4}\n### 🎓 Education\nM.S. Data Science\nWillamette University, 2026\n:::\n\n::: {.g-col-12 .g-col-md-4}\n### 🛠️ Toolkit\nR · Python · SQL\nQuarto · Git · \\[add yours\\]\n:::\n\n::: {.g-col-12 .g-col-md-4}\n### 📍 Based in\nSalem, OR\nOpen to \\[remote / relocation\\]\n:::\n\n:::\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
