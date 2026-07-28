@@ -1,0 +1,716 @@
+---
+title: "Red State, Blue State, Mental State"
+subtitle: "The Psychological Impact of Dobbs v. Jackson on Americans Across the Political Divide"
+date: last-modified
+author: "Bradley Allen and Sam Parker"
+toc: true
+format: 
+    html:
+        code-fold: true
+        code-summary: "Show code"
+        embed-resources: true
+bibliography: references.bib
+csl: apa.csl
+nocite: | 
+    @*
+execute:
+    warning: false
+jupyter: python3
+---
+
+```{python}
+#| echo: false
+
+# Import Libraries
+
+import os
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+from datetime import datetime
+from IPython.display import Markdown
+from tabulate import tabulate
+
+# libraries for linear regression
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import PredictionErrorDisplay
+from scipy import stats
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+import statsmodels.api as sm
+```
+
+```{python}
+#| echo: false
+
+# SAM IMPORT CODE
+
+# import dataset
+# cdc_data = pd.read_csv('../datasets/anxiety_depression_clean.csv')
+
+# import trends dataset
+# trends = pd.read_csv('../datasets/abortion_trends_2022_multi_state_us.csv')
+```
+
+```{python}
+#| echo: false
+
+# BRADLEY IMPORT CODE
+
+os.chdir("C:\\Users\\bradl\\OneDrive\\School\\Willamette\\2025_02_Fall\\CS_501\\Final\\Project_Data")
+
+# # CDC Data
+cdc_data = pd.read_csv("anxiety_depression_clean.csv")
+
+# # Google Trends Data
+trends = pd.read_csv('abortion_trends_2022_multi_state_us.csv')
+```
+
+# Introduction and Background
+
+Throughout American history, the Supreme Court has played a key role in shaping legal precedent, with far-ranging consequences for Americans.  The Court has affirmed hard-won human rights, such as same-sex marriage in *Obergefell v. Hodges* [@fredrickson_obergefell_nodate], and has also handed down decisions denying rights such as citizenship of a freed slave in *Dredd Scott v. Sandford* [@historycom_editors_dred_2009].  Many of the Court's decisions have a real and immediate impact on the American public. The *Dredd Scott* decision, for example, created immense public outrage, and is seen as one of the key events leading up to the American Civil War [@historycom_editors_dred_2009]. As such, it is reasonable to infer that any major Supreme Court decision may induce anxiety and stress in adults.
+
+In 2022, the Supreme Court ruled on another landmark case, *Dobbs v. Jackson*, that overturned five decades of precedent established by *Roe v. Wade*, putting the question of legal abortion to the States [@palacio_implications_2023].  According to the Kaiser Family Foundation [-@kaiser_family_foundation_abortion_2025], access to abortion varies by state and exists on a continuum ranging from a total ban to no gestational limits.  Given this spectrum of access, it is reasonable to infer that anxiety and depressive symptoms may have been heightened in states where abortion was banned compared to states with fewer restrictions.
+
+Access to abortion is generally understood as varying by political philosophy.  According to a Pew Research Center poll [-@pew_research_center_public_2025], party affiliation dramatically affects views on abortion, with 57% of Republicans responding that “abortion should be *illegal* [emphasis added] in all / most cases” and 85% of Democrats maintaining that “abortion should be *legal* [emphasis added] in all / most cases."  Given this political split, it is likely that the *Dobbs v. Jackson* decision impacted anxiety rates differently in the most conservative states versus the least conservative states.
+
+The present analysis aims to understand whether levels of anxiety and depression differed for adults living in the top 5 most conservative (conservative) vs. the top 5 least conservative (liberal) states during and after the *Dobbs* decision, and especially in the wake of related legal restrictions on reproductive rights.  To assess this relationship, we will compare anxiety / depression scores in conservative states to liberal states, whose abortion restrictions range from abortion ban (most conservative) to low or no restriction (least conservative) during three times: *Before Dobbs*, *During Dobbs* and *After Dobbs*.  We hypothesize that anxiety and depression levels in more conservative states will differ from those in less conservative states during the leak and the decision, but approximately the same before and after.
+
+## Analysis of Other Potential Causes of Anxiety and Depression
+
+To ensure there were no confounding events, we explored major events at both the national (**[Table 1](#table-1-major-u.s.-events-in-2022)**) and state levels (**[Table 2](#table-2-major-events-by-state-in-2022-bullock_major_nodate)**) in and around the periods of interest and concluded that no significant events co-occurred with the Dobbs decision.  Thus, the states we chose differ in level of access to abortion (e.g., either low restrictions or total ban), while unrelated issues (e.g., cost of living, crime) would be normative in each state and unlikely to covary with abortion as a predictor of anxiety and depression symptoms.
+
+#### **Table 1**: Major Events in the U.S. in 2022
+
+```{python}
+#| echo: false
+table = [
+    ["Feb. 24","Russia invades Ukraine", "Latour and Crisp [-@latour_biggest_2022]" ],
+    ["May 2","Dobbs decision leaked", "Gerstein [-@gerstein_supreme_2022]"],
+    ["Jun. 24","Dobbs decision released", "Latour and Crisp [-@latour_biggest_2022]"],
+    ["Aug. 4","U.S. declares monkeypox emergency", "Bullock et al. [-@bullock_major_nodate]"],
+    ["Aug. 8", "Mar-a-Lago Raid", "Latour and Crisp [-@latour_biggest_2022]"],
+    ["Oct.", "Russia nuclear weapon rhetoric spike", "Perplexity AI [-@perplexity_ai_list_2025]"],
+    ["Nov. 9", "Midterm Elections", "Latour and Crisp [-@latour_biggest_2022]"]]
+Markdown(tabulate(
+    table, 
+    headers=["Date","Event", "Source"]
+))
+```
+
+#### **Table 2**: Major Events by State in 2022 [@bullock_major_nodate]
+
+```{python}
+#| echo: false
+table = [
+    ["Alabama", "","N.A." ],
+    ["Arkansas ","","N.A."],
+    ["California", "May 23", "State threatens mandatory water restrictions owing to drought"],
+    ["---", "Jul. 1", "CNN reports Cal. man with monkeypox diagnosis urging people to get vaccinated"],
+    ["---", "Jul. 24", "Oak Fire reported to have burned 12,000 acres in California"],
+    ["---", "Jul. 27", "Case of monkeypox reported in an infant"],
+    ["---", "Aug. 4", "Kaiser Foundation reports on a case of monkeypox diagnosis"],
+    ["---", "Aug. 5", "Monkeypox guidance reported by LA Times"],
+    ["Hawaii", "", "N.A."],
+    ["Indiana", "Jul. 28", "Monkeypox cases reported to include women and children"],
+    ["Maryland", "", "N.A."],
+    ["Massachusetts", "", "N.A."],
+    ["Rhode Island", "", "N.A."],
+    ["S. Dakota", "", "N.A."],
+    ["Tennessee", "Jun. 13", "Nashville Electric asks consumers to conserve electricity during heat wave"]
+]
+
+# Create table
+table_markdown = tabulate(
+    table, 
+    headers=["State", "Date", "Event"],
+    tablefmt="pipe"
+)
+
+# Note to display at the bottom of the table
+note_text = "\nNote: Reporting of major events by state on or around the periods of interest.  N.A. indicates no events reported from this source."
+
+# Combine the table and the note
+full_markdown_output = table_markdown + note_text
+
+# Display the final output
+Markdown(full_markdown_output)
+```
+
+For a more comprehensive list of national events, see Perplexity AI [-@perplexity_ai_list_2025; -@perplexity_ai_provide_2025].
+
+# Method
+
+## Python Packages
+
+To clean and analyze the data for this project, we used Python [@python_software_foundation_notitle_2025], along with the following packages: IPython [@perez_ipython_2007], Matplotlib [@hunter_matplotlib_2007], Numpy [@harris_array_2020], Pandas [@the_pandas_development_team_pandas_2020], Pytrends [@hogue_pytrends_2023], Scipy [@virtanen_scipy_2020], Seaborn [@waskom_seaborn_2021], Sklearn [@buitinck_api_2013], Statsmodels [@seabold_statsmodels_2010], and Tabulate [@astanin_python-tabulate_2022].
+
+##  Datasets & Measures
+
+### *CDC Household Pulse Survey*
+
+We analyzed data from the Centers for Disease Control and Prevention bi-weekly report on anxiety and depressive symptoms [-@centers_for_disease_control_and_prevention_indicators_2023]. Survey data was made available by the Computer and Information Sciences Department at Willamette University.
+
+The CDC compiled this dataset from responses to the Household Pulse Survey.  To measure depressive symptoms, the CDC used a modified two-item Patient Health Questionnaire scale [@national_center_for_health_statistics_anxiety_2025]. To measure anxiety symptoms, the CDC used a modified two-item Generalized Anxiety Disorder scale [@national_center_for_health_statistics_anxiety_2025].  The resulting *value* represents the percentage of adults with anxiety and/or depressive symptoms exceeding a certain threshold.
+
+The CDC dataset contains three types of indicators:
+
+- Symptoms of Anxiety Disorder
+- Symptoms of Depressive Disorder
+- Symptoms of Anxiety Disorder or Depressive Disorder
+
+For the purposes of our analysis, the response variable we chose was *Symptoms of Anxiety Disorder or Depressive Disorder*, which is the percentage of adults who exceeded the measure threshold for symptomatic expression of anxiety **or** depression. This value gives us a more robust understanding of the effects of the *Dobbs* decision on the target populations than either anxiety or depression would alone.
+
+> #### Missingness
+> The CDC dataset shows the percentage of adults reporting anxious and/or depressive symptoms during specific time periods, with data aggregated by group and subgroup (e.g., state of residence, gender identity, age group, etc.). Missingness occurred across various groups and subgroups, and was correlated only with the time period. For all time periods, anxiety/depression data was either not missing at all, or was completely missing, with no independent variable (such as age, state, etc.) accounting for missingness. As such, we concluded that the pattern of missingness is **Missing Completely At Random (MCAR)** and discarded rows with missing values during the cleaning step.
+
+### *Google Search Trends*
+
+To supplement our analysis, we collected keyword search data from [Google Trends](https://trends.google.com/). We queried Google search data for the keyword “abortion,” both nationwide and for the states listed under State Political Leanings.  This data was collected on November 8, 2025, and includes the period from January 1, 2022 to December 31, 2022 [@google_trends_alabama_nodate; -@google_trends_arkansas_nodate; -@google_trends_california_nodate; -@google_trends_hawaii_nodate; -@google_trends_indiana_nodate; -@google_trends_maryland_nodate; @google_trends_massachusetts_nodate; -@google_trends_rhode_nodate; -@google_trends_south_nodate; -@google_trends_tennessee_nodate; -@google_trends_united_nodate].
+
+### *Abortion Restrictions*
+
+We obtained abortion restriction data from The Kaiser Family Foundation, a non-profit organization that provides non-partisan health policy assessments [-@kaiser_family_foundation_abortion_2025]. Abortion restrictions are significant to this analysis because they form the nexus between state political leanings and the impact of *Dobbs v. Jackson* on anxiety and depression within the respective states, as described below.
+
+### *State Political Leanings*
+
+State political leaning information obtained from a non-partisan newspaper, The Hill, in an article that ranked state legislatures from most to least conservative [@dress_here_2022].  We selected states listed in the top 5 most conservative (*conservative*) and the top 5 least conservative (*liberal*) as reported on December 6, 2022 (**[Table 3](#table-3-political-leaning-by-state)**).
+
+#### **Table 3**: Political Leaning by State
+
+```{python}
+#| echo: false
+table = [
+    ["Alabama",         "Massachusetts"],
+    ["Tennessee",       "Hawaii"],
+    ["Indiana",         "Rhode Island"],
+    ["South Dakota",    "California"],
+    ["Arkansas",        "Maryland"]
+    ]
+Markdown(tabulate(
+    table, 
+    headers=["Conservative", "Liberal"]
+))
+```
+
+Each state in the conservative group was confirmed to have “banned” abortion, while each state in the liberal group was confirmed to allow abortion “near viability” or “no gestational limit” [@kaiser_family_foundation_abortion_2025].  States are organized in descending order from most conservative and liberal, respectively.
+
+# Procedure
+
+## Search Trends Analysis
+
+We used the Google Search Trends data to corroborate the periods of time during which abortion was top of mind in the states of interest.  The Trends data shows a spike in abortion-related search queries in both conservative and liberal states during the periods of interest.  As expected, searches for "abortion" spiked during the leak and the release of the *Dobbs* decision (**[Fig. 1.](#fig.-1.-google-search-trends-plot)**).
+
+```{python}
+#| echo: false
+
+# Convert time period start and end to datetime
+# Previously done during data cleaning step, but must be redone upon import from CSV
+
+# CDC Data
+cdc_data['time_period_start_date'] = pd.to_datetime(cdc_data['time_period_start_date'])
+cdc_data['time_period_end_date'] = pd.to_datetime(cdc_data['time_period_end_date'])
+
+# Google Trends Data
+trends['date'] = pd.to_datetime(trends['date'])
+```
+
+#### **Fig. 1.** Google Search Trends Plot
+
+```{python}
+# Sort regions alphabetically to display in legend
+sorted_categories = sorted(trends['Region'].unique())
+trends['Region'] = pd.Categorical(trends['Region'], categories=sorted_categories, ordered=True)
+
+# Create the Seaborn line plot with faceting
+g = sns.relplot(
+    data=trends,
+    x='date',
+    y='abortion',
+    hue = 'Region',
+    kind='line',
+    height=4,
+    aspect=1.5,
+    linewidth = 0.5
+)
+
+# Iterate through each subplot to customize x-axis
+for ax in g.axes.flat:
+    # Set x-axis limits based on min/max of data
+    min_date = trends['date'].min()
+    max_date = trends['date'].max()
+    ax.set_xlim(min_date, max_date)
+
+    # Format x-axis to show only month and year
+    ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %Y'))
+
+    # Rotate x-axis labels by 45 degrees
+    for label in ax.get_xticklabels():
+        label.set_rotation(45)
+        label.set_horizontalalignment('right')
+
+# Specify the dates for the vertical lines
+date1 = pd.to_datetime('2022-05-02') # May 2, 2022
+date2 = pd.to_datetime('2022-06-24') # June 24, 2022
+
+# Add the vertical lines to the last active axis ('ax' from the loop)
+line1 = ax.axvline(
+    x=date1, 
+    color='red', 
+    linestyle=':', 
+    label=f'Event 1: {date1.strftime("%Y-%m-%d")}')
+
+line2 = ax.axvline(
+    x=date2, 
+    color='green', 
+    linestyle=':', 
+    label=f'Event 2: {date2.strftime("%Y-%m-%d")}')
+
+# Clear any existing seaborn legends from the axes first
+for ax in g.axes.flat:
+    if ax.legend_ is not None:
+        ax.legend_.remove()
+
+# Manually create a legend
+
+# Get the labels for the seaborn plot data (Region names)
+seaborn_handles = list(g._legend_data.values())
+seaborn_labels = list(g._legend_data.keys())
+
+# Get the labels for the custom vertical lines
+custom_handles = [line1, line2]
+custom_labels = ['Dobbs Leak, May 2, 2022', 'Dobbs Decision, June 24, 2022']
+
+# Combine all labels into single lists
+all_handles = seaborn_handles + custom_handles
+all_labels = seaborn_labels + custom_labels
+
+# Add a unified legend to the figure
+g.figure.legend(
+    handles=all_handles,
+    labels=all_labels,
+    loc="upper left",           # Anchor the upper left of the legend box
+    bbox_to_anchor=(1, 1),      # to the upper right of the figure area
+    title='Events',             # Set the combined legend title
+    frameon=False               # Remove the legend box frame
+)
+
+g.set(
+    xlabel = 'Date',
+    ylabel = 'Prevalence of "abortion" Keyword Search'
+)
+g.fig.suptitle('Google Trends Graph of "abortion" Keyword Search Over Time')
+
+g.figure.tight_layout() 
+
+plt.show()
+```
+
+## Exploratory Data Analysis
+
+The CDC dataset included values of anxiety and depression aggregated by distinct time periods. To identify which period included meaningful data points, we narrowed our search to time periods in relation to the *Dobbs v. Jackson* decision, which was leaked on May 2, 2022 and released by the Supreme Court on June 24, 2022.  To account for variance in anxiety and depressive scores from general issues, we included scores from before and after the *Dobbs* decision (**[Table 4](#table-4-periods-of-interest)**). In the course of our exploratory data analysis, we graphed the available data for 2022 grouped by conservative and liberal states (**[Fig. 2.](#fig.-2.-plots-of-anxiety-depression-scores-by-conservative-and-liberal-states)**), then by average score per political leaning (**[Fig. 3.](#fig.-3.-plot-of-average-anxiety-depression-scores)**).
+
+#### **Table 4**: Periods of Interest
+
+```{python}
+#| echo: false
+table = [
+    ["*Dobbs Leak*", "May 2, 2022" ,"Apr 27 - May 9, 2022"],
+    ["*Before Dobbs*", "","Jun 1 - Jun 13, 2022"],
+    ["*Dobbs Decision*", "Jun 24, 2022","Jun 29 - Jul 11, 2022"],
+    ["*After Dobbs*", "", "Jul 27 - Aug 8, 2022"]
+    ]
+Markdown(tabulate(
+    table, 
+    headers=["Event", "Event Date" , "CDC Data Time Period"]
+))
+```
+
+# Results
+
+## Data Analysis and Interpretation
+
+#### **Fig. 2.** Plots of Anxiety / Depression Scores by Conservative and Liberal States
+
+```{python}
+
+# Create cols for month and year
+cdc_data.loc[:, 'year_end'] = cdc_data['time_period_end_date'].dt.year
+cdc_data.loc[:, 'month_end'] = cdc_data['time_period_end_date'].dt.month
+
+states = {
+    'conservative': ['Alabama', 'Tennessee', 'Indiana', 'South Dakota', 'Arkansas'],
+    'liberal': ['Massachusetts', 'Hawaii', 'Rhode Island', 'California', 'Maryland']
+}
+
+
+dfs = {}
+
+# filter for anxiety OR depressive symptoms
+filtered_data = cdc_data[cdc_data['symptoms_of'] == 'Anxiety Disorder or Depressive Disorder']
+
+# group data by subgroup (state), year, and month
+grp_state_year_month = filtered_data.groupby(['subgroup', 'year_end', 'month_end'], as_index=False)['value'].mean()
+
+leanings = ['conservative', 'liberal']
+
+# create one FacetGrid for conservative states and one for liberal states
+for leaning in leanings:
+    print(f"Anxiety and Depression in {leaning.title()} States, 2022")
+
+    facet_states = states[leaning]
+
+    state_data = grp_state_year_month[
+        (grp_state_year_month['subgroup'].isin(facet_states)) & 
+        (grp_state_year_month['year_end'] == 2022)
+    ].copy()
+
+    # record political leaning
+    state_data.loc[:, 'politics'] = leaning
+
+    # save a copy of dataset in dfs dictionary for future charts
+    dfs[leaning] = state_data.copy()
+
+    # FacetGrid of states
+    g = sns.FacetGrid(
+        state_data,
+        col='subgroup',
+        col_order=facet_states
+    )
+    g.map(sns.lineplot, 'month_end', 'value')
+    g.set(
+        xticks = np.arange(1,13,1),
+        xlabel = 'Month',
+        ylabel = 'Anxiety/Depression'
+    )
+    g.set_titles("{col_name}")
+    for ax in g.axes.flat:
+        line1 = ax.axvline(x=5.07, color='r', linestyle=':')
+        line2 = ax.axvline(x=6.8, color='g', linestyle=':')
+        ax.axhline(y=30, color='grey', linestyle='--', linewidth=1)
+    
+    # Get the labels for the custom vertical lines
+    custom_handles = [line1, line2]
+    custom_labels = ['Dobbs Leak, May 2, 2022', 'Dobbs Decision, June 24, 2022'] 
+
+    # Add a unified legend to the figure
+    g.figure.legend(
+        handles=custom_handles,
+        labels=custom_labels,
+        loc="upper left",
+        bbox_to_anchor=(1, 1),
+        title='Events',
+        frameon=False
+    )
+    
+    plt.show()
+
+    print('\n')
+
+all_state_data = pd.concat(dfs.values())
+```
+
+Note: The horizontal line at *y = 30* is included to contrast average anxiety and depressive symptoms by political leaning in each group of states.  As can be observed, most of the conservative states average scores at or above 30, while most of the liberal states converged around 30.  One interpretation of this is that conservatives experience higher rates of anxiety and depressive symptoms independent of events, while liberals experience greater variability in response to events.
+
+#### **Fig. 3.** Plot of Average Anxiety / Depression Scores
+
+```{python}
+palette = {
+    'conservative': 'tab:red',
+    'liberal': 'tab:blue'
+}
+
+g = sns.lineplot(
+    all_state_data,
+    x = 'month_end',
+    y = 'value',
+    hue = 'politics',
+    palette = palette
+)
+g.set_xticks(np.arange(1,13,1))
+plt.xlabel('Month')
+plt.ylabel('Anxiety/Depression')
+plt.title('Anxiety and Depression Trends for \nTop 5 Conservative and Top 5 Liberal States (2022)')
+
+line1 = g.axvline(
+    x=5.07, 
+    color='red', 
+    linestyle=':'
+    )
+line2 = g.axvline(
+    x=6.8, 
+    color='green', 
+    linestyle=':'
+    )
+
+# manually create a legend
+h1, l1 = g.get_legend_handles_labels()
+g.legend().remove()
+
+custom_handles = [line1, line2]
+custom_labels = ['Dobbs Leak, May 2, 2022', 'Dobbs Decision, June 24, 2022'] 
+
+# combine all labels into single lists
+all_handles = h1 + custom_handles
+all_labels = ['Conservative States', 'Liberal States'] + custom_labels
+
+# add a unified legend to the figure
+g.figure.legend(
+    handles = all_handles,
+    labels = all_labels,
+    loc = "lower right",
+    bbox_to_anchor = (0.95, 0.15),
+    borderaxespad = 0,
+    title = False,
+    frameon = True
+)
+
+plt.show()
+```
+
+**[Fig. 3.](#fig.-3.-plot-of-average-anxiety-depression-scores)** reveals a strong upward trend in anxiety and depression scores immediately following the *Dobbs* leak and through the *Dobbs* decision. We therefore conclude that the peak following the Dobbs Leak represents the effect of the leak, while the following peak represents the effect of the decision.
+
+## Multiple Regression
+
+### Identification of Variables
+
+### *Variable 1: Time Period*
+
+Given our findings in **[Fig. 3](#fig.-3.-plot-of-average-anxiety-depression-scores)**, we have identified the two peaks between May and July as indicators of the effects of the Dobbs Leak and Dobbs Decision, respectively, on anxiety and depressive symptoms (**[Table 5](#table-5-adjusted-periods-of-interest)**). 
+
+To construct a linear regression model, we assigned a binary indicator to the period of interest (*0* = *"Not" Dobbs*, *1* = *Dobbs*).
+
+### *Variable 2: Political Leaning*
+
+As shown in **[Fig. 3](#fig.-3.-plot-of-average-anxiety-depression-scores)**, our analysis focuses on the difference in anxiety and depression-related trends for conservative vs. liberal states. For the purposes of analysis, we are representing state political leanings as binary variables (*0* = liberal, *1* = conservative).
+
+#### **Table 5**: Adjusted Periods of Interest
+
+```{python}
+#| echo: false
+table = [
+    ["*Before Dobbs*",      "Apr 27 - May 9, 2022",     "Not *Dobbs*",   0],
+    ["*Dobbs Leak*",        "Jun 1 - Jun 13, 2022",     "*Dobbs*",       1],
+    ["*Dobbs Decision*",    "Jun 29 - Jul 11, 2022",    "*Dobbs*",       1],
+    ["*After Dobbs*",       "Jul 27 - Aug 8, 2022",     "Not *Dobbs*",   0]
+    ]
+Markdown(tabulate(
+    table, 
+    headers=["Event", "CDC Time Period", "Classification", "Binary Assignment"]
+))
+```
+
+```{python}
+#| echo: false
+
+# Create data frame for regression and plots
+
+# set interval for dates of interest
+intervals = ['2022-04-27', '2022-06-01', '2022-06-29', '2022-07-27']
+
+# filter for the date ranges in question
+targeted_date_ranges = cdc_data.loc[cdc_data['time_period_start_date'].isin(intervals)]
+
+# filter for state groups only
+all_states = []
+all_states.extend(states['conservative'])
+all_states.extend(states['liberal'])
+targeted_data = targeted_date_ranges[targeted_date_ranges['subgroup'].isin(all_states)]
+
+# filter by indicator
+targeted_data = targeted_data[targeted_data['symptoms_of'] == 'Anxiety Disorder or Depressive Disorder']
+
+def is_cons(st):
+    if st in states['conservative']:
+        return 1
+    else:
+        return 0
+
+def is_dobbs(tp):
+    # if tp == pd.to_datetime('2022-04-27') or tp == pd.to_datetime('2022-06-29'):
+    if tp == pd.to_datetime('2022-06-01') or tp == pd.to_datetime('2022-06-29'):
+        return 1
+    else:
+        return 0
+
+targeted_data['cons'] = targeted_data['subgroup'].map(is_cons)
+
+targeted_data['dobbs'] = targeted_data['time_period_start_date'].map(is_dobbs)
+
+targeted_data.drop(columns=['symptoms_of', 'group', 'phase', 'time_period', 'low_ci', 'high_ci', 'quartile_range', 'year_end', 'month_end'], inplace=True)
+
+df = targeted_data[['value', 'cons', 'dobbs', 'time_period_start_date', 'time_period_label']].reset_index(drop=True)
+```
+
+### Multiple Regression Model
+
+```{python}
+# Print multiple regression information
+X = np.array(df[['dobbs', 'cons']])
+model = LinearRegression()
+model.fit(X, df['value'])
+
+coefs = np.round(model.coef_, decimals=2)
+
+r2_score = model.score(X, df['value'])
+
+X = df[['dobbs', 'cons']]
+```
+
+We constructed a multiple regression model based on these two variables. Our coefficients were **`{python} ' and '.join(map(str, coefs))`** and our intercept was **`{python} float(model.intercept_.round(2))`**. Our R^2 score was **`{python} round(r2_score, 2)`**.
+
+### Check for Linearity
+
+```{python}
+#| echo: false
+# Calculate and print VIF for each variable
+vif_data = pd.DataFrame()
+vif_data["feature"] = X.columns
+vif_data["VIF"] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
+```
+
+Our VIF test returned a value of **`{python} float(vif_data['VIF'].iloc[0].round(2))`**. As such, we conclude that our model does not have multicollinearity.  Our residuals plot suggests the data are linear and that we have equal variance for all x values (**[Fig. 4.](#fig.-4.-residuals-plot)**).  Our QQ plot suggests our model's residuals are evenly distributed (**[Fig. 5.](#fig.-5.-qq-plot)**), with possible outliers at the low and high ends (e.g., -2, 2).  To maintain parody between conservative and liberal states, we chose to retain these outliers. Having confirmed that we passed the checks for linearity, we constructed a multiple regression model (**[Fig. 6.](#fig.-6.-multiple-regression-plot)**).
+
+#### **Fig. 4.** Residuals Plot
+
+```{python}
+# Create residual plot
+y_pred = model.predict(X)
+residuals = df['value'] - y_pred
+
+residual_plot = PredictionErrorDisplay.from_predictions(
+    df['value'],
+    y_pred,
+    kind='residual_vs_predicted'
+)
+plt.title('Residuals Plot')
+plt.show()
+```
+
+#### **Fig. 5.** QQ Plot
+
+```{python}
+# Create QQ plot
+fig = sm.qqplot(
+    residuals,
+    line='45',
+    fit=True
+)
+plt.title('QQ Plot')
+plt.show()
+```
+
+#### **Fig. 6.** Multiple Regression Plot
+
+```{python}
+palette = {
+    1: 'tab:red',
+    0: 'tab:blue'
+}
+
+g = sns.lmplot(
+    df,
+    x='dobbs',
+    y='value',
+    hue='cons',
+    palette = palette,
+    scatter_kws = {'s': 10}
+)
+
+# Access the axes object from the FacetGrid
+ax = g.axes[0, 0] 
+
+# Create custom legend handles and labels (if needed)
+# For lmplot with hue, the handles and labels are usually derived from the hue variable
+handles, labels = ax.get_legend_handles_labels()
+labels = ['Liberal', 'Conservative']
+
+g.legend.remove()
+
+plt.legend(
+    handles,
+    labels,
+    loc = 'upper right',
+    bbox_to_anchor=(0.7, 1),
+    title = 'Political Leaning'    
+)
+plt.xticks(np.arange(0, 2, 1))
+plt.xlabel('Is Dobbs (0 = No, 1 = Yes)')
+plt.ylabel('Percent of Adults with Anxiety or Depression')
+plt.title("M. Reg. Plot of Depression / Anxiety, Politics x Dobbs")
+plt.show()
+```
+
+### Independent Samples t-Test
+
+#### **Table 6**: Descriptive Statistic and t-Test Results
+
+```{python}
+conservative_data = dfs['conservative']
+liberal_data = dfs['liberal']
+
+# Descriptive Stats
+con_mean = np.mean(conservative_data['value'])
+con_sd = np.std(conservative_data['value'])
+
+lib_mean = np.mean(liberal_data['value'])
+lib_sd = np.std(liberal_data['value'])
+
+# Perform independent samples t-test
+result = stats.ttest_ind(conservative_data['value'], liberal_data['value'], equal_var=True)
+
+t_statistic = result.statistic
+
+p_value = result.pvalue
+
+degrees_freedom = result.df
+
+# Interpret the results
+alpha = 0.05
+if p_value < alpha:
+    decision = "reject the null hypothesis. There is a statistically significant difference in means."
+else:
+    decision = "fail to reject the null hypothesis. No statistically significant difference in means."
+```
+
+```{python}
+#| echo: false
+table = [
+    ["Anxiety / Depression Score",  "Conservative",     con_mean.round(2),   con_sd.round(2)],
+    ["",                            "Liberal",          lib_mean.round(2),   lib_sd.round(2)],
+    ]
+Markdown(tabulate(
+    table, 
+    headers=["Variable", "Group" , "***M***", "***SD***"]
+))
+```
+
+```{python}
+#| echo: false
+table = [
+    ["Independent Samples t-Test", t_statistic.round(2), degrees_freedom, p_value.round(3)]
+    ]
+Markdown(tabulate(
+    table, 
+    headers=["Test", "***t***" , "***df***", "***p***"]
+))
+```
+
+Given the *p* value, we `{python} decision`
+
+# Conclusion
+
+Our analysis shows a clear difference in anxiety and depressive symptoms between populations living in conservative states compared to those in liberal states. In **[Fig. 3](#fig.-3.-plot-of-average-anxiety-depression-scores)**, we visualized these differences, concluding that conservative states report higher average levels of anxiety and depression than liberal states. We conclude that *Dobbs v. Jackson* Supreme Court case had a clear effect on populations in both conservative and liberal states. 
+
+To understand whether these effects were differentially associated with political leanings, we constructed a multi-linear regression model (**[Fig. 6](#fig.-6.-multiple-regression-plot)**). Our model indicated that the *Dobbs Leak* and *Dobbs Decision* produced a greater increase in anxiety and depressive symptoms in conservative states compared to liberal states.
+
+Given the regression findings, we then performed an independent samples t-Test to confirm that these differences were statistically significant. The results showed that survey respondents in conservative states (***M*** = `{python} float(con_mean.round(2))`, ***SD*** = `{python} float(con_sd.round(2))`) reported significantly higher anxiety and depressive symptom scores compared to respondents from liberal states (***M*** = `{python} float(lib_mean.round(2))`, ***SD*** = `{python} float(lib_sd.round(2))`), *t*(*`{python} int(degrees_freedom)`*) = `{python} float(t_statistic.round(2))`, *p* = `{python} float(p_value.round(3))` (**[Table 6](#table-6-descriptive-statistic-and-t-test-results)**).
+
+## Limitations
+
+The CDC dataset has missing data during the periods of interest and included periods of time outside the periods of interest.  For example, the *Dobbs* decision was leaked on May 2, 2022, and the data we have grouped anxiety and depression ratings from April 27 to May 9, 2022.
+
+Another limitation is the impossibility of ruling out other events as a source of variance in reported anxiety and depression scores.  Though we make a strong case that the *Dobbs* decision is the likely driver of these scores, it may be the case that political concerns other than abortion or cost of living may partially account for these differences.  Finally, our conservative data contained a possible outlier in South Dakota, whose anxiety scores appear to fall well below those of other conservative states (**[Fig. 2.](#fig.-2.-plots-of-anxiety-depression-scores-by-conservative-and-liberal-states)**).
+
+## References
