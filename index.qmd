@@ -1,7 +1,7 @@
 ---
 title: "Bradley Allen"
 subtitle: "M.S. Data Science Candidate · Willamette University"
-image: images/bradley-photo.png
+image: images/bradley-photo.jpg
 about:
   template: trestles
   image-shape: round
@@ -9,13 +9,13 @@ about:
   links:
     - icon: github
       text: GitHub
-      href: https://github.com/your_github_username
+      href: https://github.com/ballen-git
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com/in/your_github_username
+      href: https://www.linkedin.com/in/ballen-in/
     - icon: envelope
       text: Email
-      href: mailto:you@willamette.edu
+      href: mailto:bradley.allen@outlook.com
     - icon: file-earmark-pdf
       text: Resume
       href: resume.qmd
