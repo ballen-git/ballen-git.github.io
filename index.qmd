@@ -24,8 +24,7 @@ about:
 
 I build data pipelines and turn messy data into decisions people can act on.
 Right now I am finishing my M.S. in Data Science at **Willamette University**,
-where my capstone [predicts \[your one-line problem\]](capstone.qmd) for
-\[your stakeholder\].
+where my capstone [predicts \[your one-line problem\]](capstone.qmd).
 
 Python for Data Science (Data 501) Final Project: [Red State, Blue State, Mental State](data-501-final/red-state-blue-state-mental-state.html)
 
@@ -45,8 +44,19 @@ starting \[month year\]. [Get in touch](about.qmd) or grab my
 
 ::: {.g-col-12 .g-col-md-4}
 ### 🎓 Education
-M.S. Data Science
-Willamette University, 2026
+Willamette University
+* M.S. Data Science, Aug. 2026
+
+* B.S. Data Science, May 2026
+
+  * *Magna Cum Laude*
+
+* B.A. Psychology, May 2026
+
+  * *Magna Cum Laude*
+  
+  * *Department Honors*
+
 :::
 
 ::: {.g-col-12 .g-col-md-4}
