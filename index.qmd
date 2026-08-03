@@ -22,9 +22,10 @@ about:
 ---
 
 
-I build data pipelines and turn messy data into decisions people can act on.
+I conduct research on human behavior - everything from study habits, stereotypes, emotional intelligence, and psychometrics.
+
 Right now I am finishing my M.S. in Data Science at **Willamette University**,
-where my capstone [predicts \[your one-line problem\]](capstone.qmd).
+where my capstone project, [Gender Differences or Schmifferences: Testing Replication](capstone.html), uses open-source software to analyze open-source data to replicate findings of gender differences in personality and experiencing depression, anxiety, and stress.
 
 Python for Data Science (Data 501) Final Project: [Red State, Blue State, Mental State](data-501-final/red-state-blue-state-mental-state.html)
 
@@ -44,31 +45,40 @@ starting \[month year\]. [Get in touch](about.qmd) or grab my
 
 ::: {.g-col-12 .g-col-md-4}
 ### 🎓 Education
-Willamette University
+
+**Willamette University**
+
 * M.S. Data Science, Aug. 2026
 
 * B.S. Data Science, May 2026
 
-  * *Magna Cum Laude*
-
 * B.A. Psychology, May 2026
 
-  * *Magna Cum Laude*
-  
-  * *Department Honors*
+**Chemeketa Community College**
+
+* A.A. General Studies, Aug. 2023
 
 :::
 
 ::: {.g-col-12 .g-col-md-4}
 ### 🛠️ Toolkit
-R · Python · SQL
-Quarto · Git · \[add yours\]
+* R
+
+* Python
+
+* SQL
+
+* Quarto 
+
+* Research
+
+* Project Management
+
 :::
 
 ::: {.g-col-12 .g-col-md-4}
 ### 📍 Based in
 Salem, OR
-Open to \[remote / relocation\]
 :::
 
 :::

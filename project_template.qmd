@@ -1,15 +1,21 @@
 ---
-title: "Capstone: Gender Differences or Schmifferences"
-subtitle: "Testing Replication with Open-Source Data"
-date: 2026-08-14
+title: "Capstone: [Your Capstone Title]"
+subtitle: "A one-sentence hook: what you built and who it helps."
+date: 2026-07-27
 image: projects/capstone/featured.svg
 categories: [capstone, machine-learning, R]
 toc: true
 ---
 
-## Project Summary
+::: {.callout-note appearance="simple"}
+This is the anchor of your portfolio. A hiring manager who reads only one page
+should read this one. Replace every bracketed placeholder, then delete this note.
+:::
 
-> I conducted statistical analysis such as confirmatory factor analysis, independent samples t-tests, and multiple regression to replicate findings of gender differences in personality, and experiencing depression, anxiety, and stress.
+## The one-liner
+
+> We integrated **\[data sources\]** into **\[dataset\]** so that
+> **\[stakeholder\]** can **\[decision they can now make\]**.
 
 **Role:** \[e.g. I led the data pipeline and validation.\]
 **Team:** \[solo, or name + link teammates.\]
