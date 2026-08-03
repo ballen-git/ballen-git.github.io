@@ -31,8 +31,6 @@ I conducted confirmatory factor analysis to show the DASS-42 measure could justi
 
 ## Findings
 
-Lead with your best figure or your architecture diagram.
-
 ### DASS-21 Score Distribution
 
 ![On average, females score higher on stress and anxiety compared to males.](projects/capstone/fig-dass-gender-dist.png){fig-alt="Placeholder capstone figure" width="90%"}
@@ -48,8 +46,6 @@ Lead with your best figure or your architecture diagram.
 > This study replicated findings that there are gender small to moderate gender differences in personality, and experiencing depression, anxiety, and stress, and that out the Big 5 personality traits, emotional stability exerts the most influence over depression, anxiety, and stress for both males and females.
 
 ## The full write-up
-
-Pick the option that matches where your write-up lives, keep one, delete the rest.
 
 ::: {.panel-tabset}
 
