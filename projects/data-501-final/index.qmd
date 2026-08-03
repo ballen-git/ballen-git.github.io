@@ -20,5 +20,5 @@ sentences is plenty for a secondary project.
 
 ## Links
 
-- 📦 [Red State, Blue State, Mental State](data-501-final/red-state-blue-state-mental-state.html)
+- 📦 [Red State, Blue State, Mental State](red-state-blue-state-mental-state.html)
 - 🔗 \[Live demo / notebook / write-up, if any\]
