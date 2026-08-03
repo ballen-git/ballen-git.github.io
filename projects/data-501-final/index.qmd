@@ -1,0 +1,24 @@
+---
+title: "Red State, Blue State, Mental State"
+authors: Bradley Allen, Sam Parker
+description: "Python for Data Science Final Showcasing QMD and Analysis Skills."
+date: 2026-01-16
+image: date-501-clip.png
+categories: [course-work, python, visualization]
+---
+
+## What it is
+
+A short paragraph: the question, the data, and what you produced. Two to four
+sentences is plenty for a secondary project.
+
+## What I did
+
+- Skill or step one (e.g. scraped and cleaned \[source\]).
+- Skill or step two (e.g. built a \[model / dashboard / viz\]).
+- The result (e.g. \[metric, insight, or artifact\]).
+
+## Links
+
+- 📦 [Red State, Blue State, Mental State](data-501-final/red-state-blue-state-mental-state.html)
+- 🔗 \[Live demo / notebook / write-up, if any\]
