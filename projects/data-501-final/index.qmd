@@ -3,7 +3,7 @@ title: "Red State, Blue State, Mental State"
 authors: Bradley Allen, Sam Parker
 description: "Python for Data Science Final Showcasing QMD and Analysis Skills."
 date: 2026-01-16
-image: "data-501-clip.png"
+image: data-501-clip.png
 categories: [course-work, python, visualization]
 ---
 
