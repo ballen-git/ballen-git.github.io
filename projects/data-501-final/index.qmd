@@ -9,16 +9,15 @@ categories: [course-work, python, visualization]
 
 ## What it is
 
-A short paragraph: the question, the data, and what you produced. Two to four
-sentences is plenty for a secondary project.
+Sam and I explored whether the *Dobbs v Jackson* leak and decision affected the mental health of residents in conservative and liberal states differently. We used data from the Centers for Disease Control and Prevention bi-weekly report on anxiety and depressive symptoms. We paired this with data from Google Trends to show the topic of abortion saw a noticeable uptick in searches during the leak and decision, and that no other major events co-occurred to explain significant changes in mental health.
 
 ## What I did
 
-- Skill or step one (e.g. scraped and cleaned \[source\]).
-- Skill or step two (e.g. built a \[model / dashboard / viz\]).
-- The result (e.g. \[metric, insight, or artifact\]).
+- Conducted a literature review and wrote the intro, background, and conclusion
+- Searched multiple databases for major events that occurred during the period of interest
+- Compiled the results in an Quarto Markdown file to produce a research-style report
+- Conducted and interpreted the independent samples t-test
 
 ## Links
 
-- 📦 [Red State, Blue State, Mental State](red-state-blue-state-mental-state.html)
-- 🔗 \[Live demo / notebook / write-up, if any\]
+- 🔗 [Red State, Blue State, Mental State](red-state-blue-state-mental-state.html)
