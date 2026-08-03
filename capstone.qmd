@@ -11,34 +11,41 @@ toc: true
 
 > I conducted statistical analysis such as confirmatory factor analysis, independent samples t-tests, and multiple regression to replicate findings of gender differences in personality, and experiencing depression, anxiety, and stress.
 
-**Role:** \[e.g. I led the data pipeline and validation.\]
-**Team:** \[solo, or name + link teammates.\]
-**Repo:** [github.com/your_github_username/your-capstone-repo](https://github.com/your_github_username/your-capstone-repo)
+**Role:** Researcher
+
+**Team:** Solo
+
+**Repo:** [github.com/data510-capstone](https://github.com/ballen-git/data510-capstone)
 
 ## The question
 
-What problem were you solving, and why does it matter to a real stakeholder?
-Two or three sentences. No jargon a hiring manager would have to look up.
+Can open-source software, paired with open-source data, be leveraged at an intermediate level to satisfy requirements for replication research?
 
 ## The data
 
-Where the data came from, how much of it, and the one hard thing about it
-(missingness, joins across sources, scale, privacy). This is your data
-engineering story — the part the repo link backs up.
+Answers to the Depression Anxiety Stress Scales data avaialbe from the [Open Psychometrics Project](https://openpsychometrics.org/_rawdata/). This includes 39,775 responses to the 42-item Deparession Anxiety Stress Scales (DASS) measure, as well as the Ten-Item Personality Inventory.
 
 ## The approach
 
-Your method at portfolio depth: shorter than your M4 write-up, longer than a
-tweet. What did you try, what did you keep, and why.
+I conducted confirmatory factor analysis to show the DASS-42 measure could justifiably be used to compare mean differences between males and females, and then conduct independent samples t-tests to explore gender differences in personality trait scores and scores for depression, anxiety, and stress. Multiple regression was also conducted to explore how well personality traits predicted depression, anxiety, and stress differently for males and females.
 
 ## Findings
 
 Lead with your best figure or your architecture diagram.
 
-![Replace with your key result or system diagram.](projects/capstone/featured.svg){fig-alt="Placeholder capstone figure" width="90%"}
+### DASS-21 Score Distribution
 
-State the finding in plain language, then the caveat. Sparse and true beats
-full and shaky.
+![On average, females score higher on stress and anxiety compared to males.](projects/capstone/fig-dass-gender-dist.png){fig-alt="Placeholder capstone figure" width="90%"}
+
+### Personality Score Distribution
+
+![On average, females score higher on trait agreeableness and lower on emotional stability compared to males.](projects/capstone/fig-personality.png){fig-alt="Placeholder capstone figure" width="90%"}
+
+### Regression Coefficients, Personality Predicting DAS
+
+![Emotional stability is the strongest personality predictor of depression, anxiety, and stress.](projects/capstone/personality-coefficients-plot.png){fig-alt="Placeholder capstone figure" width="90%"}
+
+> This study replicated findings that there are gender small to moderate gender differences in personality, and experiencing depression, anxiety, and stress, and that out the Big 5 personality traits, emotional stability exerts the most influence over depression, anxiety, and stress for both males and females.
 
 ## The full write-up
 
@@ -46,33 +53,15 @@ Pick the option that matches where your write-up lives, keep one, delete the res
 
 ::: {.panel-tabset}
 
-### A · Native Quarto
+### Embedded PDF
 
-If your write-up is a `.qmd`, copy it into `projects/capstone/index.qmd` and
-link it, or fold its sections directly into this page. Set `eval: false` (or
-rely on `freeze`) on any chunk that needs data the public repo does not contain.
+[Download the write-up (PDF)](assets/gender_differences.pdf){.btn .btn-primary}
 
-### B · Embedded PDF
-
-```markdown
-[Download the write-up (PDF)](projects/capstone/writeup.pdf){.btn .btn-primary}
-
-<iframe src="projects/capstone/writeup.pdf" width="100%" height="800px"
+<iframe src="assets/gender-differences.pdf" width="100%" height="800px"
   style="border: 1px solid #ddd;"></iframe>
-```
-
-### C · Published Google Doc
-
-```markdown
-[Read the full write-up](https://docs.google.com/document/d/e/XXXX/pub){.btn .btn-primary}
-
-<iframe src="https://docs.google.com/document/d/e/XXXX/pub?embedded=true"
-  width="100%" height="800px" style="border: 1px solid #ddd;"></iframe>
-```
-
 :::
 
 ## Dig deeper
 
-- 📦 **Code & pipeline:** [your-capstone-repo](https://github.com/your_github_username/your-capstone-repo)
-- 📊 **Slides / poster:** \[link if you have one\]
+- 📦 **Code & pipeline:** [https://github.com/ballen-git/data510-capstone](https://github.com/ballen-git/data510-capstone)
+- 📊 **Slides / poster:** [Gender Differences Poster](projects/capstone/DATA510-poster.pdf)
