@@ -29,9 +29,71 @@ toc: true
 | **Workflow** | Git, Quarto |
 | **Communication** | Technical writing, data visualization |
 
-## Experience
+## Research and Academic Experience 
 
-**\[Job Title\]** — \[Organization\], \[Location\] *(\[dates\])*
+**MSDS Capstone Project** – Willamette University, Salem, OR 
+
+*Summer 2026*
+
+- Conducted confirmatory factor analysis to validate the 21-item Depression Anxiety Stress Scales (DASS-21) measure for between gender comparisons and replicated findings of average gender differences in depression, anxiety, stress, personality, and personality as a predictor of mental health using the Answers to Answers to the Depression Anxiety Stress Scales data set available from the Open Psychometrics Project.
+
+**MSDS Adv. ML Final Project** — Willamette University, Salem, OR 
+
+*Summer 2026*
+
+- Applied machine learning models such as XGBoost, AdaBoost, LightGBM, with Ensemble to extract important features predictive of depression, anxiety, and stress using the DASS-21 subscales for males and females with moderate to severe symptoms. Conducted a separate analysis using personality and demographic information toward the same end.
+
+**Research Assistant** — Willamette University, Salem, OR 
+
+*Fall 2025 — Summer 2026*
+
+- Used repeated measures analyses (ANOVA, multilevel modeling) to study response styles used in trait honesty scales (with Caleb Reynolds, Ph.D).
+
+**Institutional Research Assistant** – Willamette University, Salem, OR 
+
+*Fall 2025 — Summer 2026*
+
+- Conducted a literature review and assisted in survey construction to study the relationship
+between sense of community and student retention in STEM.
+
+**Senior Research Project** – Willamette University, Salem, OR 
+
+*Spring 2024 — Spring 2025*
+
+- Explored academic help-seeking behavior among Asian American college students based on internalization of the Model Minority Stereotypes (with Melissa Witkow, Ph.D).
+- During the project, I applied for IRB approval, wrote survey questions, collected and analyzed data (e.g., correlation, multiple regression), which culminated in a research paper and presentation at Willamette’s Student Scholarship Recognition Day event.
+
+
+## Work Experience
+
+**Teaching Assistant** — Willamette University, Salem, OR
+
+*January 2026 – May 2026*
+
+- Provided embedded tutoring support for 34 students in an introductory inferential statistics course. Key tasks included attending course meetings, holding office hours, creating keys to homework assignments, and grading assignments with detailed feedback.
+
+**Intro to Psychology Tutor** — Willamette University, Salem, OR 
+
+*March 2024 – May 2025*
+
+- Applied CRLA training to improve student outcomes in intro to psychology courses.
+
+**CRLA Certified Tutor** — Chemeketa Community College, Salem, OR 
+
+*June 2022 – August 2023*
+
+- Tutored students in math, writing, and psychology (i.e., intro, life span development).
+- Applied College Reading and Learning Association (CRLA) training, including active
+listening, Socratic questioning, and Bloom’s Taxonomy to enhance student learning in
+non-traditional students of diverse backgrounds.
+
+**Operations Manager** — AC&E Electric Company, Salem, OR 
+
+*November 2011 – March 2021*
+
+**Project Manager** — AC&E Electric Company, Salem OR 
+
+*June 2008 – November 2011*
 
 - Accomplishment framed as impact, not a task description.
 - Another accomplishment with a number in it if you have one.
