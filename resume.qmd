@@ -5,28 +5,28 @@ toc: true
 
 [📄 Download PDF](assets/resume-2026-07.pdf){.btn .btn-primary role="button"}
 
-::: {.callout-note appearance="simple"}
-Drop your typeset resume at `assets/resume-2026-07.pdf` and it appears below. Any PDF
-works tonight — export from Word, Google Docs, or a `vitae`/LaTeX template. The
-web summary below is what recruiters skim; the PDF is what they download.
-:::
-
-<iframe src="assets/resume-2026-07.pdf" width="100%" height="800px"
+<!-- Ctrl + / to comment back in -->
+<!-- <iframe src="assets/resume-2026-07.pdf" width="100%" height="800px"
   style="border: 1px solid #ddd; margin-top: 1rem;">
-</iframe>
+</iframe> -->
 
 ## Education
 
 **M.S. Data Science** — Willamette University, Salem, OR *(2026)*
-**B.S. \[Your Major\]** — \[Your University\], \[City\] *(\[year\])*
+
+**B.S. Data Science** — Willamette University, Salem, OR *(2026)*
+
+**B.A. Psychology** — Willamette University, Salem, OR *(2026)*
+
+**A.A. General Studies** — Chemeketa Community College, Salem, OR *(2023)*
 
 ## Skills
 
 | Area | Tools |
 |------|-------|
 | **Languages** | R, Python, SQL |
-| **Data & ML** | \[tidyverse / pandas, scikit-learn, ...\] |
-| **Workflow** | Git, Quarto, \[Docker, cloud, ...\] |
+| **Data & ML** | tidyverse / pandas, scikit-learn |
+| **Workflow** | Git, Quarto |
 | **Communication** | Technical writing, data visualization |
 
 ## Experience
