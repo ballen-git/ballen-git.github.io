@@ -1,6 +1,6 @@
 ---
 title: "About"
-image: images/profile.png
+image: images/bradley-photo2.jpg
 about:
   template: solana
   image-shape: round
