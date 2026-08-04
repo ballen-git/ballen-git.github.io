@@ -1,7 +1,7 @@
 ---
-title: "Example: [Project Name]"
-description: "One line describing what this project does and the skill it shows."
-date: 2026-05-01
+title: "Impact of War on Afghan Life Expectancy"
+description: "Demonstrate multiple ways of visualizing data."
+date: 2026-02-18
 image: data-502.png
 categories: [course-work, R, visualization]
 ---
