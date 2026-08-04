@@ -35,11 +35,6 @@ who has to trust it.
 starting \[month year\]. [Get in touch](about.qmd) or grab my
 [resume](resume.qmd).
 
-
-Python for Data Science (Data 501) Final Project: [Red State, Blue State, Mental State](data-501-final/red-state-blue-state-mental-state.html)
-
-Data Visualization (Data 502) Project: [Life Expectancy](data-502-hw04/HW04.html)
-
 ---
 
 ::: {.grid}
