@@ -1,0 +1,19 @@
+---
+title: "Example: [Project Name]"
+description: "One line describing what this project does and the skill it shows."
+date: 2026-05-01
+image: data-502.png
+categories: [course-work, R, visualization]
+---
+
+## What it is
+
+This is a homework assignment that I made into a sort of research-style report. I explored the effect of war during the early 2000s on life expectancy of Afghans. The goal was to visualize the data in different ways.
+
+## What I did
+
+- Coded the entire assignment in R Markdown
+
+## Links
+
+- 🔗 [Impact of War on Afghan Life Expectancy](../../project-data-502/HW04.html)
