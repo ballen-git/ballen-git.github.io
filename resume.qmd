@@ -100,9 +100,6 @@ non-traditional students of diverse backgrounds.
 
 ## Projects
 
-**\[Capstone Title\]** — see the [Capstone page](capstone.qmd) for the full story.
+**Gender Differences or Schmifferences** — see the [Capstone page](capstone.qmd) for the full story.
 
-- One line on the problem and your role.
-
-*Placeholders in brackets are fine while you build. Replace them with real,
-defensible entries as they materialize — sparse and true beats full and shaky.*
+- This was a replication study to support findings from existing studies that I used to showcase my analysis skills.
