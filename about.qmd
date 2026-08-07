@@ -15,14 +15,14 @@ At Willamette, my focus has been merging my interest in psychology with the tool
 
 ### Beyond the terminal
 
-- 🌲 \[Something human — a hobby, a place, a cause.\]
-- 📚 \[Currently reading / learning / building.\]
-- 🎯 \[What you want to be doing in two years.\]
+- 🌲 I enjoye good whiskey, the occasional cigar, travel, and interesting conversation.
+- 📚 Currently, I am working on finishing up a really cool research project on response styles in measures of a desirable trait - honesty
+- 🎯 In the next few months, I will be applying to graduate school for a Ph.D. in quantitative psychology, a goal I hope to complete in the next 5 years
 
 ### Get in touch
 
-I'm happy to talk about \[data work, collaborations, roles\].
+I'm happy to talk about research opportunities involving psychometrics.
 
-- ✉️ [you@willamette.edu](mailto:you@willamette.edu)
-- 💼 [LinkedIn](https://linkedin.com/in/your_github_username)
-- 💻 [GitHub](https://github.com/your_github_username)
+- ✉️ [bradley.allen@outlook.com](mailto:bradley.allen@outlook.com)
+- 💼 [LinkedIn](www.linkedin.com/in/ballen-in)
+- 💻 [GitHub](https://github.com/ballen-git)
