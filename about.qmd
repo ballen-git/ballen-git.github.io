@@ -9,16 +9,9 @@ about:
 
 ## Hi, I'm Bradley 👋
 
-The home page is the ten-second version. This is the longer story — write it in
-your own voice.
+I am a psychology oriented data enthusiast. I enjoy leveraging the power of R and Python to analyze and visualize pyschology related data sets to learn about human behavior. When I started in college, I was a psychology major interested in math and statistics. After talking with my advisor, I was directed to pick up a data science major, and ended up enjoying it so much that I enrolled in a MS of Data Science program at Willamette University.
 
-I came to data science from \[your path: a major, a job, a question that would
-not leave you alone\]. What keeps me here is \[the part of the work you genuinely
-enjoy — the modeling, the wrangling, the moment a chart makes something click\].
-
-At Willamette my focus has been \[your emphasis: forecasting, causal inference,
-NLP, data engineering, ...\]. My [capstone](capstone.qmd) is where that comes
-together.
+At Willamette, my focus has been merging my interest in psychology with the toolset I have acquired from data science. My [capstone](capstone.qmd) is where that comes together.
 
 ### Beyond the terminal
 
