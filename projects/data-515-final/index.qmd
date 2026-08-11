@@ -25,5 +25,6 @@ sentences is plenty for a secondary project.
 
 ## Links
 
-- 📦 [Repo](https://github.com/your_github_username/this-project)
-- 🔗 \[Live demo / notebook / write-up, if any\]
+- 📦 [Repo](https://github.com/ballen-git/machine-learning-to-express-emotions.git)
+- 🔗 [Research Report](machine-learning-to-express-emotions.pdf)
+- 🔗 [Supplement](machine-learning-to-express-emotions-supplement.pdf)
