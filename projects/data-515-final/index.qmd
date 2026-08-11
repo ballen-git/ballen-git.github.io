@@ -23,8 +23,17 @@ sentences is plenty for a secondary project.
 - Skill or step two (e.g. built a \[model / dashboard / viz\]).
 - The result (e.g. \[metric, insight, or artifact\]).
 
+::: {.panel-tabset}
+
+### Embedded PDF
+
+[Download the write-up (PDF)](machine-learning-to-express-emotions.pdf){.btn .btn-primary}
+
+<iframe src="machine-learning-to-express-emotions.pdf" width="100%" height="800px"
+  style="border: 1px solid #ddd;"></iframe>
+:::
+
 ## Links
 
 - 📦 [Repo](https://github.com/ballen-git/machine-learning-to-express-emotions.git)
-- 🔗 [Research Report](machine-learning-to-express-emotions.pdf)
 - 🔗 [Supplement](machine-learning-to-express-emotions-supplement.pdf)
