@@ -10,6 +10,8 @@ categories: [course-work, python, visualization]
 
 To understand whether a clinically aligned vocabulary would differently benefit males and females, I leveraged machine models to predict clinical levels of depression, anxiety, and stress in males and females using a large data set (n = 39,775).  The goal of the project was to discover whether there are underlying gender differences in measure perfomance of the 21-item Depression Anxiety and Stress Scales (DASS-21).  Findings suggest that the DASS-21 measure performs differently for females with clinically high levels of depression than for males. No differences were found for anxiety and stress.
 
+This project is an extension of my captsone project.  In the capstone project, I conducted confirmatory factor analysis to ensure the DASS-21 measure was similarly interpreted by males and females, therefore validating between-gender comparisons.
+
 ## What I did
 
 - Conducted a literature review to form research questions
