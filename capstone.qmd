@@ -51,7 +51,7 @@ I conducted confirmatory factor analysis to show the DASS-42 measure could justi
 
 ### Embedded PDF
 
-[Download the write-up (PDF)](assets/gender_differences.pdf){.btn .btn-primary}
+[Download the write-up (PDF)](/projects/capstone/gender-differences.pdf){.btn .btn-primary}
 
 <iframe src="assets/gender-differences.pdf" width="100%" height="800px"
   style="border: 1px solid #ddd;"></iframe>
@@ -59,5 +59,6 @@ I conducted confirmatory factor analysis to show the DASS-42 measure could justi
 
 ## Dig deeper
 
-- 📦 **Code & pipeline:** [https://github.com/ballen-git/data510-capstone](https://github.com/ballen-git/data510-capstone)
+- 📦 **Code & Data:** [https://github.com/ballen-git/gender-differences-or-schmifferences](https://github.com/ballen-git/gender-differences-or-schmifferences)
+- 🔗 **Supplement:** [Gender Differences Supplement](/projects/capstone/gender-differences-supplement.pdf)
 - 📊 **Slides / poster:** [Gender Differences Poster](projects/capstone/DATA510-poster.pdf)
