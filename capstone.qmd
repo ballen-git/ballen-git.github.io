@@ -15,7 +15,7 @@ toc: true
 
 **Team:** Solo
 
-**Repo:** [github.com/data510-capstone](https://github.com/ballen-git/data510-capstone)
+**Repo:** [https://github.com/ballen-git/gender-differences-or-schmifferences](https://github.com/ballen-git/gender-differences-or-schmifferences)
 
 ## The question
 
