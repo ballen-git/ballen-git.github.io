@@ -31,3 +31,5 @@ To understand whether a clinically aligned vocabulary would differently benefit 
 
 - 📦 [Repo](https://github.com/ballen-git/machine-learning-to-express-emotions.git)
 - 🔗 [Supplement](machine-learning-to-express-emotions-supplement.pdf)
+- 🛝 [Slideshow Presentation](slides.pdf)
+- 📚 [Capstone](../../capstone.qmd)
