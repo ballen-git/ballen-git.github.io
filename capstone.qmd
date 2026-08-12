@@ -62,3 +62,4 @@ I conducted confirmatory factor analysis to show the DASS-42 measure could justi
 - 📦 **Code & Data:** [https://github.com/ballen-git/gender-differences-or-schmifferences](https://github.com/ballen-git/gender-differences-or-schmifferences)
 - 🔗 **Supplement:** [Gender Differences Supplement](/projects/capstone/gender-differences-supplement.pdf)
 - 📊 **Slides / poster:** [Gender Differences Poster](projects/capstone/DATA510-poster.pdf)
+- **Related Project:** [Males and Females (Machine) Learning to Express Emotions Granularly](/projects/data-515-final/index.qmd)
