@@ -2,7 +2,7 @@
 title: "Data Ethics Writings"
 description: "One line describing what this project does and the skill it shows."
 date: 2026-05-01
-image: featured.svg
+image: thumbnail.jpg
 categories: [course-work, data ethics, longform writing]
 ---
 
