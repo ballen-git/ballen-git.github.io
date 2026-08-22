@@ -14,9 +14,9 @@ The course final was a group project wherein myself and two peers produced a *97
 
 ## Deep Dives
 
-- [Agentic Misalignment](projects\data-504-ethics\deep-dive-agentic-misalignment.pdf)
-- [Broken Windows](projects\data-504-ethics\deep-dive-broken-windows.pdf)
-- [Correctional Offender Management Profiling for Alternative Sanctions (COMPAS)](projects\data-504-ethics\deep-dive-compas.pdf)
+- [Agentic Misalignment](deep-dive-agentic-misalignment.pdf)
+- [Broken Windows](deep-dive-broken-windows.pdf)
+- [Correctional Offender Management Profiling for Alternative Sanctions (COMPAS)](deep-dive-compas.pdf)
 
 ## Links
 
