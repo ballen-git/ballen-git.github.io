@@ -17,6 +17,9 @@ The course final was a group project wherein myself and two peers produced a *97
 - [Agentic Misalignment](deep-dive-agentic-misalignment.pdf)
 - [Broken Windows](deep-dive-broken-windows.pdf)
 - [Correctional Offender Management Profiling for Alternative Sanctions (COMPAS)](deep-dive-compas.pdf)
+    - [COMPAS Perplexity Citation](deep-dive-compas-perplexity.pdf)
+- [E Scores](deep-dive-e-scores-hill-2019.pdf)
+    - [E Score Perplexity Citation](deep-dive-e-scores-perplexity.pdf)
 
 ## Links
 
