@@ -8,18 +8,16 @@ categories: [course-work, data ethics, longform writing]
 
 ## What it is
 
-This is a select collection of writings I produced for a master's course on data ethics.  Throughout the course, we responded to various works related data ethics, including [97 Things About Ethics Everyone in Data Science Should Know](https://www.oreilly.com/library/view/97-things-about/9781492072652/) edited by Bill Franks, [More Than a Glitch](https://mitpress.mit.edu/9780262548328/more-than-a-glitch/) by Meredith Broussard, and [Weapons of Math Destruction](https://www.penguinrandomhouse.com/books/241363/weapons-of-math-destruction-by-cathy-oneil/) by Cathy O'Neil.  Responses to these writings and others are included in the "Deep Dive" section.
+This is a select collection of writings I produced for a master's course on data ethics.  Throughout the course, we responded to various works related data ethics, including [97 Things About Ethics Everyone in Data Science Should Know](https://www.oreilly.com/library/view/97-things-about/9781492072652/) edited by Bill Franks, [More Than a Glitch](https://mitpress.mit.edu/9780262548328/more-than-a-glitch/) by Meredith Broussard, and [Weapons of Math Destruction](https://www.penguinrandomhouse.com/books/241363/weapons-of-math-destruction-by-cathy-oneil/) by Cathy O'Neil.  Responses to these writings and others are included in the "Deep Dives" section.
 
 The course final was a group project wherein myself and two peers produced a *97 Things* style series of essays.  My contribution to the collection is provided under the heading *Secular Morality and Data Ethics*.  In this essay, I reference another essay, *What Hath Tech Wrought*, which is also included here.
 
-## What I did
+## Deep Dives
 
-- Skill or step one (e.g. scraped and cleaned \[source\]).
-- Skill or step two (e.g. built a \[model / dashboard / viz\]).
-- The result (e.g. \[metric, insight, or artifact\]).
+- [Agentic Misalignment](projects\data-504-ethics\deep-dive-agentic-misalignment.pdf)
+- [Broken Windows](projects\data-504-ethics\deep-dive-broken-windows.pdf)
+- [Correctional Offender Management Profiling for Alternative Sanctions (COMPAS)](projects\data-504-ethics\deep-dive-compas.pdf)
 
 ## Links
 
 - 🖼 Thumbnail credit: [Getty Images: Antoniooo](https://www.gettyimages.com/detail/photo/ethics-royalty-free-image/167630368)
-- 📦 [Repo](https://github.com/your_github_username/this-project)
-- 🔗 \[Live demo / notebook / write-up, if any\]
