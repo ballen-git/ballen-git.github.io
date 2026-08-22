@@ -20,6 +20,6 @@ The course final was a group project wherein myself and two peers produced a *97
 
 ## Links
 
-- 🖼 Thumbnail credit: [Getty Images: Margi](https://www.gettyimages.com/detail/illustration/business-ethics-web-banner-infographic-royalty-free-illustration/2172383512?adppopup=true)
+- 🖼 Thumbnail credit: [Getty Images: Antoniooo](https://www.gettyimages.com/detail/photo/ethics-royalty-free-image/167630368)
 - 📦 [Repo](https://github.com/your_github_username/this-project)
 - 🔗 \[Live demo / notebook / write-up, if any\]
