@@ -12,6 +12,8 @@ This is a select collection of writings I produced for a master's course on data
 
 The course final was a group project wherein myself and two peers produced a *97 Things* style series of essays.  My contribution to the collection is provided under the heading *Secular Morality and Data Ethics*.  In this essay, I reference another essay, *What Hath Tech Wrought*, which is included below under links.
 
+My goal with this page is to highlight my short and long form writing skills. Hopefully these topics are of some interest!
+
 ## Deep Dives
 
 - [Agentic Misalignment](deep-dive-agentic-misalignment.pdf)
@@ -27,4 +29,4 @@ The course final was a group project wherein myself and two peers produced a *97
 ## Links
 
 - 📷 Thumbnail credit: [Getty Images: Antoniooo](https://www.gettyimages.com/detail/photo/ethics-royalty-free-image/167630368)
-- 📄 What Hath Tech Wrought
+- 📄 [What Hath Tech Wrought](what-hath-tech-wrought.pdf)
