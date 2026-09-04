@@ -10,7 +10,7 @@ categories: [course-work, data ethics, longform writing]
 
 This is a select collection of writings I produced for a master's course on data ethics.  Throughout the course, we responded to various works related data ethics, including [97 Things About Ethics Everyone in Data Science Should Know](https://www.oreilly.com/library/view/97-things-about/9781492072652/) edited by Bill Franks, [More Than a Glitch](https://mitpress.mit.edu/9780262548328/more-than-a-glitch/) by Meredith Broussard, and [Weapons of Math Destruction](https://www.penguinrandomhouse.com/books/241363/weapons-of-math-destruction-by-cathy-oneil/) by Cathy O'Neil.  Responses to these writings and others are included in the "Deep Dives" section.
 
-The course final was a group project wherein myself and two peers produced a *97 Things* style series of essays.  My contribution to the collection is provided under the heading *Secular Morality and Data Ethics*.  In this essay, I reference another essay, *What Hath Tech Wrought*, which is also included here.
+The course final was a group project wherein myself and two peers produced a *97 Things* style series of essays.  My contribution to the collection is provided under the heading *Secular Morality and Data Ethics*.  In this essay, I reference another essay, *What Hath Tech Wrought*, which is included below under links.
 
 ## Deep Dives
 
@@ -19,8 +19,12 @@ The course final was a group project wherein myself and two peers produced a *97
 - [Correctional Offender Management Profiling for Alternative Sanctions (COMPAS)](deep-dive-compas.pdf)
     - [COMPAS Perplexity Citation](deep-dive-compas-perplexity.pdf)
 - [E Scores](deep-dive-e-scores-hill-2019.pdf)
-    - [E Score Perplexity Citation](deep-dive-e-scores-perplexity.pdf)
+    - [E Scores Perplexity Citation](deep-dive-e-scores-perplexity.pdf)
+
+## Secular Morality and Data Ethics
+
 
 ## Links
 
-- 🖼 Thumbnail credit: [Getty Images: Antoniooo](https://www.gettyimages.com/detail/photo/ethics-royalty-free-image/167630368)
+- 📷 Thumbnail credit: [Getty Images: Antoniooo](https://www.gettyimages.com/detail/photo/ethics-royalty-free-image/167630368)
+- 📄 What Hath Tech Wrought
