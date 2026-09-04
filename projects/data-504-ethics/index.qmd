@@ -24,7 +24,7 @@ My goal with this page is to highlight my short and long form writing skills. Ho
     - [E Scores Perplexity Citation](deep-dive-e-scores-perplexity.pdf)
 
 ## Secular Morality and Data Ethics
-
+- [Essay](secular-morality-and-data-ethics.pdf)
 
 ## Links
 
