@@ -5,7 +5,7 @@ image: images/bradley-photo3.jpg
 about:
   template: trestles
   image-shape: round
-  image-width: 16em
+  image-width: 12em
   links:
     - icon: github
       text: GitHub
