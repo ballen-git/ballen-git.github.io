@@ -1,7 +1,7 @@
 ---
 title: "Bradley Allen"
 subtitle: "M.S. Data Science Candidate · Willamette University"
-image: images/bradley-photo4.pdf
+image: images/bradley-photo4.jpg
 about:
   template: trestles
   image-shape: round
