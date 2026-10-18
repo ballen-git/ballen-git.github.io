@@ -8,13 +8,29 @@ categories: [course-work, data ethics, longform writing]
 
 ## What it is
 
-This is a select collection of writings I produced for a master's course on data ethics.  Throughout the course, we responded to various works related data ethics, including [97 Things About Ethics Everyone in Data Science Should Know](https://www.oreilly.com/library/view/97-things-about/9781492072652/) edited by Bill Franks, [More Than a Glitch](https://mitpress.mit.edu/9780262548328/more-than-a-glitch/) by Meredith Broussard, and [Weapons of Math Destruction](https://www.penguinrandomhouse.com/books/241363/weapons-of-math-destruction-by-cathy-oneil/) by Cathy O'Neil.  Responses to these writings and others are included in the "Deep Dives" section.
+Throughout the course, we responded to various works related data ethics, including [97 Things About Ethics Everyone in Data Science Should Know](https://www.oreilly.com/library/view/97-things-about/9781492072652/) edited by Bill Franks, [More Than a Glitch](https://mitpress.mit.edu/9780262548328/more-than-a-glitch/) by Meredith Broussard, and [Weapons of Math Destruction](https://www.penguinrandomhouse.com/books/241363/weapons-of-math-destruction-by-cathy-oneil/) by Cathy O'Neil.  
 
-The course final was a group project wherein myself and two peers produced a *97 Things* style series of essays.  My contribution to the collection is provided under the heading *Secular Morality and Data Ethics*.  In this essay, I reference another essay, *What Hath Tech Wrought*, which is included below under links.
+The final was a group project wherein myself and two peers produced a *97 Things* style series of essays.  My contribution to the collection is provided under "The full write up."  I reference another essay, *What Hath Tech Wrought*, which is linked below under "Referenced Essay."
 
-My goal with this page is to highlight my short and long form writing skills. Hopefully these topics are of some interest!
+## The full write-up
+
+::: {.panel-tabset}
+
+### Embedded PDF
+
+[Download the write-up (PDF)](/projects/data-504-ethics/secular-morality-and-data-ethics.pdf .pdf){.btn .btn-primary}
+
+<iframe src="/projects/capstone/gender-differences.pdf" width="100%" height="800px"
+  style="border: 1px solid #ddd;"></iframe>
+:::
+
+## Referenced Essay
+
+- 📄 [What Hath Tech Wrought](what-hath-tech-wrought.pdf)
 
 ## Deep Dives
+
+Below is a selection of shorter works, about 500 words each, highlighting my short-form writing skills. Due to the short nature of the papers, and given that they are responses to works we read, the introductions are abrupt. I am including these because I enjoyed writing them.
 
 - [Agentic Misalignment](deep-dive-agentic-misalignment.pdf)
 - [Broken Windows](deep-dive-broken-windows.pdf)
@@ -22,10 +38,6 @@ My goal with this page is to highlight my short and long form writing skills. Ho
     - [COMPAS Perplexity Citation](deep-dive-compas-perplexity.pdf)
 - [E Scores](deep-dive-e-scores-hill-2019.pdf)
     - [E Scores Perplexity Citation](deep-dive-e-scores-perplexity.pdf)
-
-## Secular Morality and Data Ethics
-- 📄 [Essay](secular-morality-and-data-ethics.pdf)
-- 📄 [What Hath Tech Wrought](what-hath-tech-wrought.pdf)
 
 ## Credit
 
