@@ -18,9 +18,9 @@ The final was a group project wherein myself and two peers produced a *97 Things
 
 ### Embedded PDF
 
-[Download the write-up (PDF)](/projects/data-504-ethics/secular-morality-and-data-ethics.pdf .pdf){.btn .btn-primary}
+[Download the write-up (PDF)](/projects/data-504-ethics/secular-morality-and-data-ethics.pdf){.btn .btn-primary}
 
-<iframe src="/projects/capstone/gender-differences.pdf" width="100%" height="800px"
+<iframe src="/projects/capstone/data-504-ethics/secular-morality-and-data-ethics.pdf" width="100%" height="800px"
   style="border: 1px solid #ddd;"></iframe>
 :::
 
