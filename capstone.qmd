@@ -9,7 +9,7 @@ toc: true
 
 ## Project Summary
 
-> I conducted statistical analysis such as confirmatory factor analysis, independent samples t-tests, and multiple regression to replicate findings of gender differences in personality, and experiencing depression, anxiety, and stress.
+> I conducted statistical analyses such as confirmatory factor analysis, independent samples t-tests, and multiple regression to replicate findings of gender differences in personality, and experiencing depression, anxiety, and stress.
 
 **Role:** Researcher
 
