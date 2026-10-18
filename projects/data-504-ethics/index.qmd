@@ -10,7 +10,7 @@ categories: [course-work, data ethics, longform writing]
 
 Throughout the course, we responded to various works related data ethics, including [97 Things About Ethics Everyone in Data Science Should Know](https://www.oreilly.com/library/view/97-things-about/9781492072652/) edited by Bill Franks, [More Than a Glitch](https://mitpress.mit.edu/9780262548328/more-than-a-glitch/) by Meredith Broussard, and [Weapons of Math Destruction](https://www.penguinrandomhouse.com/books/241363/weapons-of-math-destruction-by-cathy-oneil/) by Cathy O'Neil.  
 
-The final was a group project wherein myself and two peers produced a *97 Things* style series of essays.  My contribution to the collection is provided under "The full write up."  I reference another essay, *What Hath Tech Wrought*, which is linked below under "Referenced Essay."
+The final was a group project wherein myself and two peers produced a *97 Things* style series of essays.  My contribution to the collection was an essay titled, *Secular Morality and Data Ethics: The Need for a Cohesive Moral Framework*. My goal was argue for an updated deontological framework one could use as a calculus to interrogate data and present results.  I reference another essay, *What Hath Tech Wrought*, which is linked below under "Referenced Essay."
 
 ## The full write-up
 
