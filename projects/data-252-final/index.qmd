@@ -4,7 +4,7 @@ authors: Siera Edwards, Haydn Duncan, Mamadou Dem, Bradley Allen
 description: "Star classification project showcasing machine learning skills in R."
 date: 2025-05-05
 image: thumbnail.PNG
-categories: [course-work, R, visualization, machine learning, undergraduate]
+categories: [course-work, R, visualization, machine learning, undergraduate course]
 ---
 
 ## What it is
