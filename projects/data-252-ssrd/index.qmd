@@ -1,0 +1,42 @@
+---
+title: "The Impact of Substances on Sleep Quality"
+authors: Siera Edwards, Haydn Duncan, Mamadou Dem, Bradley Allen
+description: "We explored the relationship between sleep quality and alcohol, caffeine, and tobacco use."
+date: 2026-05-01
+image: thumbnail.PNG
+categories: [course-work, R, visualization, machine learning, undergraduate course]
+---
+
+## What it is
+We explored the effects of alcohol and caffeine consumption on sleep efficiency and deep sleep using the [Sleep Efficiency Dataset](https://www.kaggle.com/datasets/equilibriumm/sleep-efficiency) from Kaggle. Machine models used in the analyses included linear regression, tree, LDA / QDA, ridge regression, and LASSO. We presented our findings at Willamette's Student Scholarship Recognition Day.
+
+
+## What I did
+
+- Conducted background research and wrote the introduction
+- Coded and presented the linear models.
+- Combined code from all authors into a single markdown.
+- Caffeine differently affected males (positive) and females (negative).
+- Alcohol was negatively associated with sleep quality overall.
+- The negative effect of alcohol was amplified in smokers when compared to non-smokers.
+
+## Presentation
+
+::: {.panel-tabset}
+
+### Embedded PDF
+
+[Download the write-up (PDF)](/projects/data-252-ssrd/ssrd-presentation.pdf){.btn .btn-primary}
+
+<iframe src="/projects/data-252-ssrd/ssrd-presentation.pdf" width="100%" height="800px"
+  style="border: 1px solid #ddd;"></iframe>
+:::
+
+## Links
+
+- 📄 [Background](/projects/data-252-ssrd/ssrd-background.pdf)
+- 📦 [Markdown](/projects/data-252-ssrd/ssrd-markdown.pdf)
+
+## Credit
+
+- 📝 Co-author credit: [Siera Edwards](https://www.linkedin.com/in/siera-edwards/), [Haydn Duncan](https://www.linkedin.com/in/haydn-duncan/), [Mamadou Dem](https://www.linkedin.com/in/mamadou-dem-b3b858330/)
