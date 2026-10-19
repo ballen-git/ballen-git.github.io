@@ -8,7 +8,7 @@ categories: [course-work, jamovi, model minority stereotype, help-seeking, writi
 
 ## What it is
 
-This is my senior research project. I explored the relationship between internalized stereotypes of hard work and innate intelligence and academic help-seeking behavior in Asian American college students. To examine these relationships, I conducted correlation, regression, and mediation analyses.  Results were presented at Willamette University's Student Scholardship Recognition Day in Spring of 2024.
+This is my senior research project. I explored the relationship between internalized stereotypes of hard work and innate intelligence and academic help-seeking behavior in Asian American college students. To examine these relationships, I conducted correlation, regression, and mediation analyses.  Results were presented at Willamette University's Student Scholardship Recognition Day (SSRD) in Spring of 2024.
 
 ## What I did
 
@@ -32,5 +32,4 @@ This is my senior research project. I explored the relationship between internal
 
 ## Links
 
-- 🔗 \[Live demo / notebook / write-up, if any\]
-- 📊 **SSRD Poster:** [MMS Poster](projects\psyc-497-senior-internship\ssrd-poster-sp24.pdf)
+- 📊 **SSRD Poster:** [MMS Poster](projects/psyc-497-senior-internship/ssrd-poster-sp24.pdf)
