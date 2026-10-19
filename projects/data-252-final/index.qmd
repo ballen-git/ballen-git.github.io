@@ -1,5 +1,6 @@
 ---
-title: "Example: [Project Name]"
+title: "Star Light, Star Bright: What Size of Star May I Classify Tonight?"
+authors: Siera Edwards, Haydn Duncan, Mamadou Dem, Bradley Allen
 description: "Star classification project showcasing machine learning skills in R."
 date: 2025-05-05
 image: thumbnail.PNG
