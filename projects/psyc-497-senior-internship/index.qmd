@@ -1,8 +1,8 @@
 ---
 title: "Example: [Project Name]"
-description: "One line describing what this project does and the skill it shows."
-date: 2026-05-01
-image: featured.svg
+description: "Senior research project showcasing writing and analytical skills."
+date: 2025-04-29
+image: thumbnail.png
 categories: [course-work, python, visualization]
 ---
 
@@ -23,7 +23,20 @@ sentences is plenty for a secondary project.
 - Skill or step two (e.g. built a \[model / dashboard / viz\]).
 - The result (e.g. \[metric, insight, or artifact\]).
 
+## Research Paper
+
+::: {.panel-tabset}
+
+### Embedded PDF
+
+[Download the write-up (PDF)](/projects/psyc-497-senior-internship/senior-research-paper.pdf){.btn .btn-primary}
+
+<iframe src="/projects/psyc-497-senior-internship/senior-research-paper.pdf" width="100%" height="800px"
+  style="border: 1px solid #ddd;"></iframe>
+:::
+
+
 ## Links
 
-- 📦 [Repo](https://github.com/your_github_username/this-project)
 - 🔗 \[Live demo / notebook / write-up, if any\]
+- 📊 **SSRD Poster:** [MMS Poster](projects/psyc-497-senior-internship/ssrd-poster-sp24.pdf)
