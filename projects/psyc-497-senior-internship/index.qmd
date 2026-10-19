@@ -2,7 +2,7 @@
 title: "Example: [Project Name]"
 description: "Senior research project showcasing writing and analytical skills."
 date: 2025-04-29
-image: thumbnail.png
+image: thumbnail.PNG
 categories: [course-work, python, visualization]
 ---
 
