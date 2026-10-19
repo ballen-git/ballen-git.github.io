@@ -1,0 +1,48 @@
+---
+title: "The Power Griddy: Oregon Dances with Big Data"
+authors: Aiyana Brown, Bradley Allen
+description: "This project visualizes the potential impact of data centers on Oregon's power grid."
+date: 2026-04-23
+image: thumbnail.png
+categories: [course-work, R, visualization, graduate course]
+---
+
+## What it is
+
+This is a data visualization project exploring to potential impact of data centers on Oregon's power grid. I worked on this project with Aiyana Brown (Linked-in profile below). We examined whether Oregon's pursuit of data centers is compatible with clean energy mandates. Our results suggest that consumption in climing to meet production, and by reducing natural gas usage to meet clean energy mandates, Oregon runs the risk of energy deficits by 2035.
+
+## What I did
+
+- Conducted background research and collected data.
+- Collaborated with Aiyana to produce multiple ggplots
+- Created the "Shocking: Data Center Power Needs Dwarf Salem, OR Avg Use" plot
+- Created a leaflet plot (see "Project Reflection" below) that now requires an API key...
+
+## Argument Bullet Points
+
+- Data centers are expected to expand in and around Oregon’s largest population centers.
+- This places people at increased risk of harm during severe weather events.
+- For example, in 2021, Texas experienced a massive ice storm, causing power outages that claimed 246 people while data center generators whirred.
+- We urge our governor and legislators to reevaluate current green energy policies and balance economic growth – building data centers – with public wellbeing.
+- If nothing changes, Oregon runs the risk of pursuing a policy of renewable energy, disposable people.
+
+::: {.panel-tabset}
+
+## Presentation
+
+### Embedded PDF
+
+[Download the write-up (PDF)](/projects/data-502-vis-final/data-vis-presentation.pdf){.btn .btn-primary}
+
+<iframe src="/projects/data-502-vis-final/data-vis-presentation.pdf" width="100%" height="800px"
+  style="border: 1px solid #ddd;"></iframe>
+:::
+
+
+## Links
+
+- 📄 [Project Reflection](/projects/data-502-vis-final/data-vis-reflection.pdf)
+
+## Credit
+
+- 📝 Co-author credit: [Aiyana Brown](https://www.linkedin.com/in/aiyana-brown/)
