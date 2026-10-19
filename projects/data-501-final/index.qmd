@@ -1,0 +1,28 @@
+---
+title: "Red State, Blue State, Mental State"
+authors: Bradley Allen, Sam Parker
+description: "Python for Data Science Final Showcasing QMD and Analysis Skills."
+date: 2026-01-16
+image: data-501-clip.png
+categories: [course-work, python, visualization, research, graduate course]
+---
+
+## What it is
+
+Sam and I explored whether the *Dobbs v Jackson* leak and decision affected the mental health of residents in conservative and liberal states differently. We used data from the Centers for Disease Control and Prevention bi-weekly report on anxiety and depressive symptoms. We paired this with data from Google Trends to show the topic of abortion saw a noticeable uptick in searches during the leak and decision, and that no other major events co-occurred to explain significant changes in mental health.
+
+## What I did
+
+- Conducted a literature review and wrote the intro, background, and conclusion
+- Searched multiple databases for major events that occurred during the period of interest
+- Compiled the results in an Quarto Markdown file to produce a research-style report
+- Conducted and interpreted the independent samples t-test
+
+## Links
+
+- 🔗 [Red State, Blue State, Mental State](../../project-data-501/red-state-blue-state-mental-state.html)
+- 📄 [Perplexity (2025a) PDF](/projects/data-501-final/perplexity-2025a.pdf)
+- 📄 [Perplexity (2025b) PDF](/projects/data-501-final/perplexity-2025b.pdf)
+
+## Credit
+- 📝 Co-author credit: [Sam Parker](https://www.linkedin.com/in/sam-parker-mt/)
