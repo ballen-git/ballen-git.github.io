@@ -3,7 +3,7 @@ title: "The Model Minority Stereotype and Help-Seeking in Asian American College
 description: "Senior research project showcasing writing and analytical skills."
 date: 2025-04-29
 image: thumbnail.PNG
-categories: [course-work, jamovi, model minority stereotype, help-seeking, writing sample, undergraduate course, research]
+categories: [course-work, jamovi, model minority stereotype, help-seeking, undergraduate course, research]
 ---
 
 ## What it is

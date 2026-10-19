@@ -3,7 +3,7 @@ title: "Males and Females (Machine) Learning to Express Emotions Granularly"
 description: "This project applies machine learning to predic clinical depression, anxiety, and stress in males and females."
 date: 2026-08-14
 image: thumbnail.png
-categories: [course-work, python, visualization]
+categories: [course-work, python, R, visualization, research, graduate course]
 ---
 
 ## What it is
