@@ -1,7 +1,7 @@
 ---
 title: "Red State, Blue State, Mental State"
 subtitle: "The Psychological Impact of Dobbs v. Jackson on Americans Across the Political Divide"
-date: 2026-01-16
+date: last-modified
 author: "Bradley Allen and Sam Parker"
 toc: true
 format: 
