@@ -1,29 +1,38 @@
 ---
 title: "Example: [Project Name]"
-description: "One line describing what this project does and the skill it shows."
+description: "Star classification project showcasing machine learning skills in R."
 date: 2025-05-05
 image: thumbnail.PNG
-categories: [course-work, python, visualization]
+categories: [course-work, R, visualization, machine learning, undergraduate]
 ---
-
-::: {.callout-tip appearance="simple"}
-This is a sample "other project" card. Copy this folder for each real project,
-edit the front matter (title, date, image, categories), and delete this example
-once you have your own.
-:::
 
 ## What it is
 
-A short paragraph: the question, the data, and what you produced. Two to four
-sentences is plenty for a secondary project.
+Using the [Star Dataset to Predict Star Types](https://www.kaggle.com/datasets/deepu1109/star-dataset) available from Kaggle, we trained various machine models (e.g., kNN, tree classification, bagging, logistic regression) to predict star types. We presented our findings to the class and submitted a write up for our final.  
 
 ## What I did
 
-- Skill or step one (e.g. scraped and cleaned \[source\]).
-- Skill or step two (e.g. built a \[model / dashboard / viz\]).
-- The result (e.g. \[metric, insight, or artifact\]).
+- Compiled code from three other contributors into a single markdown.
+- Wrote the introduction, conducted and reported the kNN analysis.
+- Composed and formatted the final write up for the group.
+
+## Write-up
+
+::: {.panel-tabset}
+
+### Embedded PDF
+
+[Download the write-up (PDF)](/projects/data-252-final/classification-write-up.pdf){.btn .btn-primary}
+
+<iframe src="/projects/data-252-final/classification-write-up.pdf" width="100%" height="800px"
+  style="border: 1px solid #ddd;"></iframe>
+:::
 
 ## Links
 
-- 📦 [Repo](https://github.com/your_github_username/this-project)
-- 🔗 \[Live demo / notebook / write-up, if any\]
+- 📦 [Markdown](/projects/data-252-final/classification-markdown.pdf)
+- 🎦 [Slideshow Presentation](/projects/data-252-final/classification-slides.pdf)
+
+## Credit
+
+- 📝 Co-author credit: [Siera Edwards](https://www.linkedin.com/in/siera-edwards/), [Haydn Duncan](https://www.linkedin.com/in/haydn-duncan/), [Mamadou Dem](https://www.linkedin.com/in/mamadou-dem-b3b858330/)

@@ -19,6 +19,8 @@ This project is an extension of my captsone project.  In the capstone project, I
 - Coded and applied machine models to a large data
 - Wrote a research paper to report the results
 
+## Research Paper
+
 ::: {.panel-tabset}
 
 ### Embedded PDF
@@ -33,5 +35,5 @@ This project is an extension of my captsone project.  In the capstone project, I
 
 - 📦 [Repo](https://github.com/ballen-git/machine-learning-to-express-emotions.git)
 - 🔗 [Supplement](machine-learning-to-express-emotions-supplement.pdf)
-- 🛝 [Slideshow Presentation](slides.pdf)
+- 🎦 [Slideshow Presentation](slides.pdf)
 - 📚 [Capstone](../../capstone.qmd)
