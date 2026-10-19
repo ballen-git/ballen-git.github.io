@@ -2,7 +2,7 @@
 title: "The Impact of Substances on Sleep Quality"
 authors: Siera Edwards, Haydn Duncan, Mamadou Dem, Bradley Allen
 description: "We explored the relationship between sleep quality and alcohol, caffeine, and tobacco use."
-date: 2026-05-01
+date: 2025-04-29
 image: thumbnail.PNG
 categories: [course-work, R, visualization, machine learning, undergraduate course]
 ---
