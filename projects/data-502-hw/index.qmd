@@ -3,7 +3,7 @@ title: "Impact of War on Afghan Life Expectancy"
 description: "Demonstrate multiple ways of visualizing data."
 date: 2026-02-18
 image: data-502.png
-categories: [course-work, R, visualization]
+categories: [course-work, R, visualization, graduate course]
 ---
 
 ## What it is
