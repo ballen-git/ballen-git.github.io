@@ -21,8 +21,7 @@ Sam and I explored whether the *Dobbs v Jackson* leak and decision affected the 
 ## Links
 
 - 🔗 [Red State, Blue State, Mental State](../../project-data-501/red-state-blue-state-mental-state.html)
-- 📄 [Perplexity (2025a) PDF](/projects/data-501-final/perplexity-2025a.pdf)
-- 📄 [Perplexity (2025b) PDF](/projects/data-501-final/perplexity-2025b.pdf)
+
 
 ## Credit
 - 📝 Co-author credit: [Sam Parker](https://www.linkedin.com/in/sam-parker-mt/)
