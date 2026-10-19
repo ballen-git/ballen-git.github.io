@@ -1,27 +1,21 @@
 ---
-title: "Example: [Project Name]"
+title: "The Model Minority Stereotype and Help-Seeking in Asian American College Students"
 description: "Senior research project showcasing writing and analytical skills."
 date: 2025-04-29
 image: thumbnail.PNG
-categories: [course-work, python, visualization]
+categories: [research, jamovi, model minority stereotype, help-seeking]
 ---
-
-::: {.callout-tip appearance="simple"}
-This is a sample "other project" card. Copy this folder for each real project,
-edit the front matter (title, date, image, categories), and delete this example
-once you have your own.
-:::
 
 ## What it is
 
-A short paragraph: the question, the data, and what you produced. Two to four
-sentences is plenty for a secondary project.
+This is my senior research project. I explored the relationship between internalized stereotypes of hard work and innate intelligence and academic help-seeking behavior in Asian American college students. To examine these relationships, I conducted correlation, regression, and mediation analyses.  Results were presented at Willamette University's Student Scholardship Recognition Day in Spring of 2024.
 
 ## What I did
 
-- Skill or step one (e.g. scraped and cleaned \[source\]).
-- Skill or step two (e.g. built a \[model / dashboard / viz\]).
-- The result (e.g. \[metric, insight, or artifact\]).
+- Conducted a literature review on the model minority stereotype (MMS) and help-seeking behavior.
+- Added a measure for help-seeking behavior to a survey, and assisted in applying for IRB approval.
+- Cleaned and analyzed the data, reporting the results in a research-style paper.
+- Results revealed that internalized stereotypes were differently associate with help-seeking behaviors.
 
 ## Research Paper
 
