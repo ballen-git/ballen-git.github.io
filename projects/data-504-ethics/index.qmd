@@ -36,7 +36,7 @@ Below is a selection of shorter works, about 500 words each, highlighting my sho
 - [Broken Windows](deep-dive-broken-windows.pdf)
 - [Correctional Offender Management Profiling for Alternative Sanctions (COMPAS)](deep-dive-compas.pdf)
     - [COMPAS Perplexity Citation](deep-dive-compas-perplexity.pdf)
-- [E Scores](deep-dive-e-scores-hill-2019.pdf)
+- [E Scores](deep-dive-e-scores.pdf)
     - [E Scores Perplexity Citation](deep-dive-e-scores-perplexity.pdf)
 
 ## Credit
