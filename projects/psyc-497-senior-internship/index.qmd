@@ -39,4 +39,4 @@ sentences is plenty for a secondary project.
 ## Links
 
 - 🔗 \[Live demo / notebook / write-up, if any\]
-- 📊 **SSRD Poster:** [MMS Poster](projects/psyc-497-senior-internship/ssrd-poster-sp24.pdf)
+- 📊 **SSRD Poster:** [MMS Poster](projects\psyc-497-senior-internship\ssrd-poster-sp24.pdf)
