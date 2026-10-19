@@ -36,4 +36,5 @@ This is my senior research project. I explored the relationship between internal
 
 ## Credit
 
+- 👩‍🏫 Faculty credit: This project was completed under the guidance of Professor Melissa Witkow.
 - 📷 Thumbnail credit: Petersen, W. (1966, January 9). Success story, Japanese-American style. *New York Times*.
