@@ -1,0 +1,40 @@
+---
+title: "A History of Stereotypes in South Pacific, The King and I, and Flower Drum Song"
+description: "An exploration of the impact of US foreign policy on musical theater."
+date: 2025-12-09
+image: thumbnail.PNG
+categories: [course-work, python, visualization]
+---
+
+
+## What it is
+
+This is a paper I wrote for a theater history class. The paper is about U.S. foreign policies of containment and integration during the Cold War and the affect they had on entertainment. Specifically, the Rodgers and Hammerstein musicals South Pacific (1949), The King and I (1951), and Flower Drum Song (1958).  These very successful plays were all turned into full length films and had an outsized affect on popular culture in the U.S. during their respective times.  This paper was a lot of work to write and I feel it turned out quite well.  I believe it is also a good example of the MLA argumentative paper style that I enjoy writing but have gotten away from. It is also somewhat related to my [senior research project](/projects/psyc-497-senior-internship/).
+
+## Presentation
+
+::: {.panel-tabset}
+
+### Embedded PDF
+
+[Download the write-up (PDF)](/projects/thtr-214-final/theater-presentation.pdf){.btn .btn-primary}
+
+<iframe src="/projects/thtr-214-final/theater-presentation.pdf" width="100%" height="800px"
+  style="border: 1px solid #ddd;"></iframe>
+:::
+
+## Paper
+
+::: {.panel-tabset}
+
+### Embedded PDF
+
+[Download the write-up (PDF)](/projects/thtr-214-final/theater-final-essay.pdf){.btn .btn-primary}
+
+<iframe src="/projects/thtr-214-final/theater-final-essay.pdf" width="100%" height="800px"
+  style="border: 1px solid #ddd;"></iframe>
+:::
+
+## Credit
+
+- Thumbnail: [aluxum](https://www.istockphoto.com/portfolio/aluxum) via [iStock by Getty Images](https://www.istockphoto.com/photo/broadway-gm495858191-41429136)
