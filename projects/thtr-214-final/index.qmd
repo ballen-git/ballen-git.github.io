@@ -3,7 +3,7 @@ title: "A History of Stereotypes in South Pacific, The King and I, and Flower Dr
 description: "An exploration of the impact of US foreign policy on musical theater."
 date: 2025-12-09
 image: thumbnail.PNG
-categories: [course-work, python, visualization]
+categories: [course-work, musical theater, history, undergraduate course]
 ---
 
 
