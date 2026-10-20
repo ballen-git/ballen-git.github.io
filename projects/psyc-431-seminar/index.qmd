@@ -1,7 +1,7 @@
 ---
 title: "Improving Social Connection Through Emotional Intelligence"
 description: "This project argues for the importance of social emotional learning."
-date: 2026-05-01
+date: 2025-05-02
 image: thumbnail.png
 categories: [course-work, SEL, senior seminar, undergraduate course]
 ---
