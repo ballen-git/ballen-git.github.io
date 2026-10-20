@@ -22,9 +22,9 @@ This is my senior seminar project about improving social connection through emot
 
 ### Embedded PDF
 
-[Download the write-up (PDF)](/projects/psyc-497-senior-internship/senior-research-paper.pdf){.btn .btn-primary}
+[Download the write-up (PDF)](/projects/psyc-431-seminar/final-draft.pdf){.btn .btn-primary}
 
-<iframe src="/projects/psyc-497-senior-internship/senior-research-paper.pdf" width="100%" height="800px"
+<iframe src="/projects/psyc-431-seminar/final-draft.pdf" width="100%" height="800px"
   style="border: 1px solid #ddd;"></iframe>
 :::
 
