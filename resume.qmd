@@ -14,19 +14,19 @@ toc: true
 
 **Willamette University**, Salem, OR
 
-- **M.S. Data Science** *(2026)*
+- M.S. Data Science *(2026)*
 
-- **B.S. Data Science** *(2026)*
+- B.S. Data Science *(2026)*
 
   - *Magna Cum Laude*
 
-- **B.A. Psychology** *(2026)*
+- B.A. Psychology *(2026)*
 
   - *Magna Cum Laude*, Department Honors
 
 **Chemeketa Community College**, Salem, OR
 
-**A.A. General Studies** —  *(2023)*
+- A.A. General Studies *(2023)*
 
 ## Skills
 
