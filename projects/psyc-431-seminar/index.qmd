@@ -1,0 +1,37 @@
+---
+title: "Improving Social Connection Through Emotional Intelligence"
+description: "This project argues for the importance of social emotional learning."
+date: 2026-05-01
+image: thumbnail.png
+categories: [course-work, SEL, senior seminar, undergraduate course]
+---
+
+## What it is
+
+This is my senior seminar project about improving social connection through emotional intelligence. It is an argumentative essay that makes the case for wider implementation of standardized social emotional learning models. The basis for the argument is that in the United States, there is an epidemic of lonliness, which is deleterious to public health. One way to address this epidemic is to improve social interaction in early education.
+
+## What I did
+
+- Background research on social emotional learning models
+- Bring together multiple disciplines of psychology (e.g., eudcation, personality, clinical)
+- Present one of the foundational articles for the essay for peer feedback (see links below)
+
+## Essay
+
+::: {.panel-tabset}
+
+### Embedded PDF
+
+[Download the write-up (PDF)](/projects/psyc-497-senior-internship/senior-research-paper.pdf){.btn .btn-primary}
+
+<iframe src="/projects/psyc-497-senior-internship/senior-research-paper.pdf" width="100%" height="800px"
+  style="border: 1px solid #ddd;"></iframe>
+:::
+
+## Links
+
+- 🎦 [Slideshow Presentation](/projects/psyc-431-seminar/presentation.pdf)
+
+## Credit
+
+- Thumbnail credit: [skynesher](https://www.istockphoto.com/portfolio/skynesher?mediatype=photography) via [iStock](https://www.istockphoto.com/photo/rear-view-of-large-group-of-students-on-a-class-at-lecture-hall-gm1138138146-303736676)
