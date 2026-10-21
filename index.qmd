@@ -24,8 +24,8 @@ about:
 
 I conduct research on human behavior - everything from study habits, stereotypes, emotional intelligence, and psychometrics.
 
-Right now I am finishing my M.S. in Data Science at **Willamette University**,
-where my capstone project, [Gender Differences or Schmifferences: Testing Replication](capstone.html), uses open-source software to analyze open-source data to replicate findings of gender differences in personality and experiencing depression, anxiety, and stress.
+I recently finished my M.S. in Data Science at **Willamette University**,
+where my capstone project, [Gender Differences or Schmifferences: Testing Replication](capstone.html), used open-source software to analyze open-source data, replicating findings of gender differences in personality and experiencing depression, anxiety, and stress.
 
 **Currently looking for** research roles in psychology or data science. [Get in touch](about.qmd) or grab my
 [resume](resume.qmd).
@@ -39,15 +39,15 @@ where my capstone project, [Gender Differences or Schmifferences: Testing Replic
 
 **Willamette University**
 
-* M.S. Data Science, Aug. 2026
+* M.S. Data Science (Aug. 2026)
 
-* B.S. Data Science, May 2026
+* B.S. Data Science (May 2026)
 
-* B.A. Psychology, May 2026
+* B.A. Psychology (May 2026)
 
 **Chemeketa Community College**
 
-* A.A. General Studies, Aug. 2023
+* A.A. General Studies (Aug. 2023)
 
 :::
 
