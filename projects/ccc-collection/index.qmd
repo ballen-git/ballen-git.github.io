@@ -1,0 +1,27 @@
+---
+title: "Chemeketa Collection"
+description: "This is a collection of writings from my Associate of Art courses."
+date: 2023-09-01
+image: ccc.jpeg
+categories: [course-work, associate course, covid, SEL, active shooter drills, school choice, essay collection]
+---
+
+## What it is
+
+This is a series of essays I wrote during my time at Chemeketa Community College (2021-2023). These are very early works, and may are likely a little rough around the edges. That said, I recall spending a lot of time thinking about these topics and wrote about them with great care. I have split up the essays under there main topics. My goal with this is to show that some of these topics have been long on my mind (social-emotional learning, mainly). They also serve as artifacts of my emerging writing style.
+
+## Social Emotional Learning
+- 📄 [Emotional Intelligence: A Possible Longterm Solution to School Shootings](com218-final-essay.pdf)
+    - This is the basis of my senior seminar paper, [Improving Social Connection Through Emotional Intelligence](/projects/psyc-431-seminar/).
+
+## Active Shooter Drills
+- 📄 [A Critique of Active Shooter Drills from a Psychological Perspective](wr121-research-essay.pdf)
+
+## COVID
+- 📄 [The Parent, the Picture, and the Pandemic: How One Mother's Viral Photo Captured the Need for School Choice](wr122-written-argument.pdf)
+- 📄 [Photo Composition Analysis of COVID Messaging](wr115-photo-composition.pdf)
+
+## For Fun Essays
+- 📄 [Rhetorical Analysis of a False Confession Informational Video](wr121-rhetorical-analysis.pdf)
+- 📄 [Writing 121 Reflection](wr121-reflection.pdf)
+    - I am including this because this course and this teacher were instrumental in my college experience. This was intended to be a heartfelt and humorous conclusion to the course.
