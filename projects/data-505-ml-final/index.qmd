@@ -9,7 +9,7 @@ categories: [course-work, python, machine learning, research, jupyter notebook, 
 
 ## What it is
 
-We combined from [Oregon Department of Forestry (2000-2022)](https://www.kaggle.com/datasets/mattop/fire-occurrence-and-cause-data-2000-2022) and the [US Wildfire Dataset (2014-2025)](https://www.kaggle.com/datasets/firecastrl/us-wildfire-dataset/data) to explore how environmental and human related factors differently predict human-caused versus lightning-caused wildfires in Oregon. Each author was responsible for coding a model (e.g., Gradient Boosting, kNN, Random Forest, Decision Tree), and together we combine all models into a single Ensemble model. The code files are available as Jupyter Notebooks and can be used to replicate our findings easily with Google Drive. See the linkes section below.
+We combined from [Oregon Department of Forestry (2000-2022)](https://www.kaggle.com/datasets/mattop/fire-occurrence-and-cause-data-2000-2022) and the [US Wildfire Dataset (2014-2025)](https://www.kaggle.com/datasets/firecastrl/us-wildfire-dataset/data) to explore how environmental and human related factors differently predict human-caused versus lightning-caused wildfires in Oregon. Each author was responsible for coding a model (e.g., Gradient Boosting, kNN, Random Forest, Decision Tree), and together we combine all models into a single Ensemble model. The code files are available as Jupyter Notebooks and can be used to replicate our findings easily with Google Drive. See the links section below.
 
 ## What I did
 
