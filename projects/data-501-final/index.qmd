@@ -24,5 +24,5 @@ Sam and I explored whether the *Dobbs v Jackson* leak and decision affected the 
 - 📄 [Perplexity (2025a) PDF](/projects/data-501-final/perplexity-2025a.pdf)
 - 📄 [Perplexity (2025b) PDF](/projects/data-501-final/perplexity-2025b.pdf)
 
-## Credit
-- 📝 Co-author credit: [Sam Parker](https://www.linkedin.com/in/sam-parker-mt/)
+## Coauthor
+- <i class="bi bi-linkedin" style="color: #0077b5;"></i> [Sam Parker](https://www.linkedin.com/in/sam-parker-mt/)

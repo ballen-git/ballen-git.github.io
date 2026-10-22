@@ -33,4 +33,6 @@ We combined
 
 - <i class="bi bi-github"></i> [Repo](https://github.com/ballen-git/fitting-fire-with-fire-features)
 
-- <i class="bi bi-linkedin" style="color: #0077b5;"></i> [LinkedIn](https://linkedin.com) [Serenna Walter](https://www.linkedin.com/in/serenna-walter/), [Ben Dyer](https://www.linkedin.com/in/bdyer22/), [Manish Reddy Kallu](https://www.linkedin.com/in/manish-reddy-kallu-583b61421/)
+## Coauthors
+
+- <i class="bi bi-linkedin" style="color: #0077b5;"></i> [Serenna Walter](https://www.linkedin.com/in/serenna-walter/), [Ben Dyer](https://www.linkedin.com/in/bdyer22/), [Manish Reddy Kallu](https://www.linkedin.com/in/manish-reddy-kallu-583b61421/)

@@ -37,6 +37,6 @@ We explored the effects of alcohol and caffeine consumption on sleep efficiency 
 - 📄 [Background](/projects/data-252-ssrd/ssrd-background.pdf)
 - 📦 [Markdown](/projects/data-252-ssrd/ssrd-markdown.pdf)
 
-## Credit
+## Coauthors
 
-- 📝 Co-author credit: [Siera Edwards](https://www.linkedin.com/in/siera-edwards/), [Haydn Duncan](https://www.linkedin.com/in/haydn-duncan/), [Mamadou Dem](https://www.linkedin.com/in/mamadou-dem-b3b858330/)
+- <i class="bi bi-linkedin" style="color: #0077b5;"></i> [Siera Edwards](https://www.linkedin.com/in/siera-edwards/), [Haydn Duncan](https://www.linkedin.com/in/haydn-duncan/), [Mamadou Dem](https://www.linkedin.com/in/mamadou-dem-b3b858330/)

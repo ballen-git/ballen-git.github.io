@@ -34,6 +34,6 @@ Using the [Star Dataset to Predict Star Types](https://www.kaggle.com/datasets/d
 - 📦 [Markdown](/projects/data-252-final/classification-markdown.pdf)
 - 🎦 [Slideshow Presentation](/projects/data-252-final/classification-slides.pdf)
 
-## Credit
+## Coauthors
 
-- 📝 Co-author credit: [Siera Edwards](https://www.linkedin.com/in/siera-edwards/), [Haydn Duncan](https://www.linkedin.com/in/haydn-duncan/), [Mamadou Dem](https://www.linkedin.com/in/mamadou-dem-b3b858330/)
+- <i class="bi bi-linkedin" style="color: #0077b5;"></i> [Siera Edwards](https://www.linkedin.com/in/siera-edwards/), [Haydn Duncan](https://www.linkedin.com/in/haydn-duncan/), [Mamadou Dem](https://www.linkedin.com/in/mamadou-dem-b3b858330/)
