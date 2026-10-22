@@ -1,9 +1,10 @@
 ---
-title: "Example: [Project Name]"
+title: "Fitting Fire with Fire (Features): Machine Learning to Parse Human from Natural Causes of Forest Fires"
+authors: "Serenna Walter, Ben Dyer, Manish Reddy Kallu, Bradley Allen"
 description: "One line describing what this project does and the skill it shows."
-date: 2026-05-01
-image: featured.svg
-categories: [course-work, python, visualization]
+date: 2026-04-27
+image: thumbnail.PNG
+categories: [course-work, python, machine learning, research, jupyter notebook, graduate course]
 ---
 
 ::: {.callout-tip appearance="simple"}
