@@ -33,7 +33,7 @@ This project is an extension of my captsone project.  In the capstone project, I
 
 ## Links
 
-- 📦 [Repo](https://github.com/ballen-git/machine-learning-to-express-emotions.git)
+- <i class="bi bi-github"></i> [Repo](https://github.com/ballen-git/machine-learning-to-express-emotions.git)
 - 🔗 [Supplement](machine-learning-to-express-emotions-supplement.pdf)
 - 🎦 [Slideshow Presentation](slides.pdf)
 - 📚 [Capstone](../../capstone.qmd)
