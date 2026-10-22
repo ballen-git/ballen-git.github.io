@@ -18,8 +18,8 @@ We combined from [Oregon Department of Forestry (2000-2022)](https://www.kaggle.
 - Wrote the background, data, method, ensemble, results, and limitations sections.
 - Model results were in line with prior studies, suggesting good model fit for Oregon, specifically.
 - Model results for lightning vs. human features achieved 85% accuracy.
-- The model predicted a large (173k acre), naturally caused fire (lightning), but not a large (50k acre) human caused.
-- THe model predicted whether the same fires were lightning vs. human caused.
+- The Ensemble model predicted a large (173k acre), naturally caused fire (lightning), but not a large (50k acre) human caused.
+- The Ensemble model predicted whether the same fires were lightning vs. human caused.
 
 ## Presentation
 
