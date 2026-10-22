@@ -45,4 +45,4 @@ This is a data visualization project exploring to potential impact of data cente
 
 ## Coauthors
 
-- - <i class="bi bi-linkedin" style="color: #0077b5;"></i> [Aiyana Brown](https://www.linkedin.com/in/aiyana-brown/)
+- <i class="bi bi-linkedin" style="color: #0077b5;"></i> [Aiyana Brown](https://www.linkedin.com/in/aiyana-brown/)
