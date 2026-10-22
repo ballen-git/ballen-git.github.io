@@ -1,22 +1,15 @@
 ---
 title: "Fitting Fire with Fire (Features): Machine Learning to Parse Human from Natural Causes of Forest Fires"
 authors: "Serenna Walter, Ben Dyer, Manish Reddy Kallu, Bradley Allen"
-description: "One line describing what this project does and the skill it shows."
+description: "Applied machine learning to predict forest fire occurrences and causes."
 date: 2026-04-27
 image: thumbnail.PNG
 categories: [course-work, python, machine learning, research, jupyter notebook, graduate course]
 ---
 
-::: {.callout-tip appearance="simple"}
-This is a sample "other project" card. Copy this folder for each real project,
-edit the front matter (title, date, image, categories), and delete this example
-once you have your own.
-:::
-
 ## What it is
 
-A short paragraph: the question, the data, and what you produced. Two to four
-sentences is plenty for a secondary project.
+We combined 
 
 ## What I did
 
@@ -38,5 +31,6 @@ sentences is plenty for a secondary project.
 
 ## Links
 
-- {{< bi github >}} [Repo](https://github.com/ballen-git/fitting-fire-with-fire-features)
-- {{< bi linkedin color=#0077b5 >}} [Serenna Walter](https://www.linkedin.com/in/serenna-walter/), [Ben Dyer](https://www.linkedin.com/in/bdyer22/), [Manish Reddy Kallu](https://www.linkedin.com/in/manish-reddy-kallu-583b61421/)
+- <i class="bi bi-github"></i> [Repo](https://github.com/ballen-git/fitting-fire-with-fire-features)
+
+- <i class="bi bi-linkedin" style="color: #0077b5;"></i> [LinkedIn](https://linkedin.com) [Serenna Walter](https://www.linkedin.com/in/serenna-walter/), [Ben Dyer](https://www.linkedin.com/in/bdyer22/), [Manish Reddy Kallu](https://www.linkedin.com/in/manish-reddy-kallu-583b61421/)
