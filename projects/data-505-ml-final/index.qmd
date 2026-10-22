@@ -9,13 +9,17 @@ categories: [course-work, python, machine learning, research, jupyter notebook, 
 
 ## What it is
 
-We combined 
+We combined from [Oregon Department of Forestry (2000-2022)](https://www.kaggle.com/datasets/mattop/fire-occurrence-and-cause-data-2000-2022) and the [US Wildfire Dataset (2014-2025)](https://www.kaggle.com/datasets/firecastrl/us-wildfire-dataset/data) to explore how environmental and human related factors differently predict human-caused versus lightning-caused wildfires in Oregon. Each author was responsible for coding a model (e.g., Gradient Boosting, kNN, Random Forest, Decision Tree), and together we combine all models into a single Ensemble model. The code files are available as Jupyter Notebooks and can be used to replicate our findings easily with Google Drive. See the linkes section below.
 
 ## What I did
 
-- Skill or step one (e.g. scraped and cleaned \[source\]).
-- Skill or step two (e.g. built a \[model / dashboard / viz\]).
-- The result (e.g. \[metric, insight, or artifact\]).
+- Applied a spatio-temporal join using Geopandas to merge the ODF and US Wildfire data.
+- Coded and analyzed data using the kNN model.
+- Wrote the background, data, method, ensemble, results, and limitations sections.
+- Model results were in line with prior studies, suggesting good model fit for Oregon, specifically.
+- Model results for lightning vs. human features achieved 85% accuracy.
+- The model predicted a large (173k acre), naturally caused fire (lightning), but not a large (50k acre) human caused.
+- THe model predicted whether the same fires were lightning vs. human caused.
 
 ## Presentation
 
