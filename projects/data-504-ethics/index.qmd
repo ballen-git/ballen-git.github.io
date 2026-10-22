@@ -42,6 +42,8 @@ Below is a selection of shorter works, about 500 words each, highlighting my sho
 ## Presentation Slides
 
 - 🎦 [Presentation](presentation.pdf)
+- Coauthors
+    - <i class="bi bi-linkedin" style="color: #0077b5;"></i> [Emily Strickland](https://www.linkedin.com/in/emilyvstrickland/), [Sophia Rabbanian](https://www.linkedin.com/in/sophiarabbanian/)
 
 ## Credit
 
